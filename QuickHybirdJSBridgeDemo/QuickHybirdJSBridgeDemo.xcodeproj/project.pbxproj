@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F13841091FF7710700D20AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F13841081FF7710700D20AE0 /* AppDelegate.m */; };
+		F13841111FF7710800D20AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13841101FF7710800D20AE0 /* Assets.xcassets */; };
+		F13841141FF7710800D20AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13841121FF7710800D20AE0 /* LaunchScreen.storyboard */; };
+		F13841171FF7710800D20AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F13841161FF7710800D20AE0 /* main.m */; };
+		F138412F1FF7717000D20AE0 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F138412A1FF7717000D20AE0 /* WebViewJavascriptBridge.m */; };
+		F13841301FF7717000D20AE0 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F138412C1FF7717000D20AE0 /* WebViewJavascriptBridgeBase.m */; };
+		F13841311FF7717000D20AE0 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F138412E1FF7717000D20AE0 /* WKWebViewJavascriptBridge.m */; };
+		F13841371FF7717700D20AE0 /* QHBaseWebLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F13841341FF7717700D20AE0 /* QHBaseWebLoader.m */; };
+		F13841431FF7883C00D20AE0 /* QHJSRegisterBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F13841421FF7883C00D20AE0 /* QHJSRegisterBaseClass.m */; };
+		F13841461FF7908400D20AE0 /* QHJSPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F13841451FF7908400D20AE0 /* QHJSPageApi.m */; };
+		F13841501FF793E500D20AE0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F138414E1FF793E500D20AE0 /* TestViewController.m */; };
+		F13841511FF793E500D20AE0 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F138414F1FF793E500D20AE0 /* TestViewController.xib */; };
+		F13841541FF7C00C00D20AE0 /* QHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13841531FF7C00C00D20AE0 /* QHBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F13841041FF7710700D20AE0 /* QuickHybirdJSBridgeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickHybirdJSBridgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13841071FF7710700D20AE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F13841081FF7710700D20AE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F13841101FF7710800D20AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F13841131FF7710800D20AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F13841151FF7710800D20AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13841161FF7710800D20AE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F13841291FF7717000D20AE0 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		F138412A1FF7717000D20AE0 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		F138412B1FF7717000D20AE0 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		F138412C1FF7717000D20AE0 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		F138412D1FF7717000D20AE0 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		F138412E1FF7717000D20AE0 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		F13841331FF7717700D20AE0 /* QHBaseWebLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHBaseWebLoader.h; sourceTree = "<group>"; };
+		F13841341FF7717700D20AE0 /* QHBaseWebLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHBaseWebLoader.m; sourceTree = "<group>"; };
+		F13841411FF7883C00D20AE0 /* QHJSRegisterBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRegisterBaseClass.h; sourceTree = "<group>"; };
+		F13841421FF7883C00D20AE0 /* QHJSRegisterBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRegisterBaseClass.m; sourceTree = "<group>"; };
+		F13841441FF7908400D20AE0 /* QHJSPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSPageApi.h; sourceTree = "<group>"; };
+		F13841451FF7908400D20AE0 /* QHJSPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSPageApi.m; sourceTree = "<group>"; };
+		F138414D1FF793E500D20AE0 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F138414E1FF793E500D20AE0 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		F138414F1FF793E500D20AE0 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		F13841521FF7C00C00D20AE0 /* QHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHBaseViewController.h; sourceTree = "<group>"; };
+		F13841531FF7C00C00D20AE0 /* QHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHBaseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F13841011FF7710700D20AE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F13840FB1FF7710700D20AE0 = {
+			isa = PBXGroup;
+			children = (
+				F13841061FF7710700D20AE0 /* QuickHybirdJSBridgeDemo */,
+				F13841051FF7710700D20AE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F13841051FF7710700D20AE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13841041FF7710700D20AE0 /* QuickHybirdJSBridgeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13841061FF7710700D20AE0 /* QuickHybirdJSBridgeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F13841071FF7710700D20AE0 /* AppDelegate.h */,
+				F13841081FF7710700D20AE0 /* AppDelegate.m */,
+				F138414D1FF793E500D20AE0 /* TestViewController.h */,
+				F138414E1FF793E500D20AE0 /* TestViewController.m */,
+				F138414F1FF793E500D20AE0 /* TestViewController.xib */,
+				F13841271FF7716900D20AE0 /* quickhybird */,
+				F13841101FF7710800D20AE0 /* Assets.xcassets */,
+				F13841121FF7710800D20AE0 /* LaunchScreen.storyboard */,
+				F13841151FF7710800D20AE0 /* Info.plist */,
+				F13841161FF7710800D20AE0 /* main.m */,
+			);
+			path = QuickHybirdJSBridgeDemo;
+			sourceTree = "<group>";
+		};
+		F13841271FF7716900D20AE0 /* quickhybird */ = {
+			isa = PBXGroup;
+			children = (
+				F138413C1FF77FE700D20AE0 /* BaseCore */,
+				F13841401FF7882E00D20AE0 /* hybirdAPI */,
+				F13841321FF7717700D20AE0 /* EJSCore */,
+				F13841281FF7717000D20AE0 /* WebViewJavascriptBridge */,
+			);
+			path = quickhybird;
+			sourceTree = "<group>";
+		};
+		F13841281FF7717000D20AE0 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F13841291FF7717000D20AE0 /* WebViewJavascriptBridge.h */,
+				F138412A1FF7717000D20AE0 /* WebViewJavascriptBridge.m */,
+				F138412B1FF7717000D20AE0 /* WebViewJavascriptBridgeBase.h */,
+				F138412C1FF7717000D20AE0 /* WebViewJavascriptBridgeBase.m */,
+				F138412D1FF7717000D20AE0 /* WKWebViewJavascriptBridge.h */,
+				F138412E1FF7717000D20AE0 /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		F13841321FF7717700D20AE0 /* EJSCore */ = {
+			isa = PBXGroup;
+			children = (
+				F13841331FF7717700D20AE0 /* QHBaseWebLoader.h */,
+				F13841341FF7717700D20AE0 /* QHBaseWebLoader.m */,
+			);
+			path = EJSCore;
+			sourceTree = "<group>";
+		};
+		F138413C1FF77FE700D20AE0 /* BaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				F13841521FF7C00C00D20AE0 /* QHBaseViewController.h */,
+				F13841531FF7C00C00D20AE0 /* QHBaseViewController.m */,
+			);
+			path = BaseCore;
+			sourceTree = "<group>";
+		};
+		F13841401FF7882E00D20AE0 /* hybirdAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F13841411FF7883C00D20AE0 /* QHJSRegisterBaseClass.h */,
+				F13841421FF7883C00D20AE0 /* QHJSRegisterBaseClass.m */,
+				F13841441FF7908400D20AE0 /* QHJSPageApi.h */,
+				F13841451FF7908400D20AE0 /* QHJSPageApi.m */,
+			);
+			path = hybirdAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13841031FF7710700D20AE0 /* QuickHybirdJSBridgeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F138411A1FF7710800D20AE0 /* Build configuration list for PBXNativeTarget "QuickHybirdJSBridgeDemo" */;
+			buildPhases = (
+				F13841001FF7710700D20AE0 /* Sources */,
+				F13841011FF7710700D20AE0 /* Frameworks */,
+				F13841021FF7710700D20AE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickHybirdJSBridgeDemo;
+			productName = QuickHybirdJSBridgeDemo;
+			productReference = F13841041FF7710700D20AE0 /* QuickHybirdJSBridgeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F13840FC1FF7710700D20AE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QH;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.gh;
+				TargetAttributes = {
+					F13841031FF7710700D20AE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F13840FF1FF7710700D20AE0 /* Build configuration list for PBXProject "QuickHybirdJSBridgeDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F13840FB1FF7710700D20AE0;
+			productRefGroup = F13841051FF7710700D20AE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13841031FF7710700D20AE0 /* QuickHybirdJSBridgeDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13841021FF7710700D20AE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13841141FF7710800D20AE0 /* LaunchScreen.storyboard in Resources */,
+				F13841511FF793E500D20AE0 /* TestViewController.xib in Resources */,
+				F13841111FF7710800D20AE0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F13841001FF7710700D20AE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13841301FF7717000D20AE0 /* WebViewJavascriptBridgeBase.m in Sources */,
+				F13841311FF7717000D20AE0 /* WKWebViewJavascriptBridge.m in Sources */,
+				F13841171FF7710800D20AE0 /* main.m in Sources */,
+				F138412F1FF7717000D20AE0 /* WebViewJavascriptBridge.m in Sources */,
+				F13841371FF7717700D20AE0 /* QHBaseWebLoader.m in Sources */,
+				F13841501FF793E500D20AE0 /* TestViewController.m in Sources */,
+				F13841541FF7C00C00D20AE0 /* QHBaseViewController.m in Sources */,
+				F13841091FF7710700D20AE0 /* AppDelegate.m in Sources */,
+				F13841431FF7883C00D20AE0 /* QHJSRegisterBaseClass.m in Sources */,
+				F13841461FF7908400D20AE0 /* QHJSPageApi.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F13841121FF7710800D20AE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13841131FF7710800D20AE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F13841181FF7710800D20AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F13841191FF7710800D20AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F138411B1FF7710800D20AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HRG6W7579C;
+				INFOPLIST_FILE = QuickHybirdJSBridgeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gh.QuickHybirdJSBridgeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F138411C1FF7710800D20AE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HRG6W7579C;
+				INFOPLIST_FILE = QuickHybirdJSBridgeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gh.QuickHybirdJSBridgeDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F13840FF1FF7710700D20AE0 /* Build configuration list for PBXProject "QuickHybirdJSBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13841181FF7710800D20AE0 /* Debug */,
+				F13841191FF7710800D20AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F138411A1FF7710800D20AE0 /* Build configuration list for PBXNativeTarget "QuickHybirdJSBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F138411B1FF7710800D20AE0 /* Debug */,
+				F138411C1FF7710800D20AE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F13840FC1FF7710700D20AE0 /* Project object */;
+}
