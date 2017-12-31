@@ -23,8 +23,14 @@
 		4E0D88551FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D884D1FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m */; };
 		4E0D88561FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D884F1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m */; };
 		4E0D88681FF8B075006B40DA /* res in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88671FF8B075006B40DA /* res */; };
-		4E0D886A1FF8B18A006B40DA /* modules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88691FF8B18A006B40DA /* modules.plist */; };
+		4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */; };
 		4E0D886D1FF8B268006B40DA /* TestPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D886C1FF8B268006B40DA /* TestPayApi.m */; };
+		4E745DDE1FF8C199004BDF86 /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */; };
+		4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */; };
+		4E745DE41FF8CEE5004BDF86 /* QHJSRuntimeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */; };
+		4E745DE71FF8CF2D004BDF86 /* QHJSUiApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE51FF8CF2C004BDF86 /* QHJSUiApi.m */; };
+		4E745DED1FF8D293004BDF86 /* QHDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DEC1FF8D293004BDF86 /* QHDeviceUtil.m */; };
+		4E745DF11FF8D72B004BDF86 /* QHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DF01FF8D72B004BDF86 /* QHToast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +82,21 @@
 		4E0D884E1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		4E0D884F1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		4E0D88671FF8B075006B40DA /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
-		4E0D88691FF8B18A006B40DA /* modules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = modules.plist; sourceTree = "<group>"; };
+		4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = qhjsmodules.plist; sourceTree = "<group>"; };
 		4E0D886B1FF8B268006B40DA /* TestPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPayApi.h; sourceTree = "<group>"; };
 		4E0D886C1FF8B268006B40DA /* TestPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPayApi.m; sourceTree = "<group>"; };
+		4E745DDC1FF8C145004BDF86 /* QHJSAuthApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
+		4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSAuthApi.m; sourceTree = "<group>"; };
+		4E745DDF1FF8CE03004BDF86 /* QHJSDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceApi.h; sourceTree = "<group>"; };
+		4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSDeviceApi.m; sourceTree = "<group>"; };
+		4E745DE21FF8CEE5004BDF86 /* QHJSRuntimeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRuntimeApi.h; sourceTree = "<group>"; };
+		4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRuntimeApi.m; sourceTree = "<group>"; };
+		4E745DE51FF8CF2C004BDF86 /* QHJSUiApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSUiApi.m; sourceTree = "<group>"; };
+		4E745DE61FF8CF2D004BDF86 /* QHJSUiApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSUiApi.h; sourceTree = "<group>"; };
+		4E745DEB1FF8D14C004BDF86 /* QHDeviceUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHDeviceUtil.h; sourceTree = "<group>"; };
+		4E745DEC1FF8D293004BDF86 /* QHDeviceUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHDeviceUtil.m; sourceTree = "<group>"; };
+		4E745DEF1FF8D72B004BDF86 /* QHToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHToast.h; sourceTree = "<group>"; };
+		4E745DF01FF8D72B004BDF86 /* QHToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHToast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +152,11 @@
 				4E0D88361FF8ADD1006B40DA /* TestViewController.h */,
 				4E0D88341FF8ADD1006B40DA /* TestViewController.m */,
 				4E0D88371FF8ADD1006B40DA /* TestViewController.xib */,
-				4E0D88691FF8B18A006B40DA /* modules.plist */,
+				4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */,
 				4E0D886B1FF8B268006B40DA /* TestPayApi.h */,
 				4E0D886C1FF8B268006B40DA /* TestPayApi.m */,
 				4E0D88671FF8B075006B40DA /* res */,
+				4E745DE91FF8D08F004BDF86 /* core */,
 				4E0D883D1FF8ADF4006B40DA /* quickhybird */,
 				4E0D880B1FF8AD63006B40DA /* Assets.xcassets */,
 				4E0D880D1FF8AD63006B40DA /* LaunchScreen.storyboard */,
@@ -197,10 +216,18 @@
 		4E0D88441FF8ADF4006B40DA /* hybirdAPI */ = {
 			isa = PBXGroup;
 			children = (
+				4E745DE61FF8CF2D004BDF86 /* QHJSUiApi.h */,
+				4E745DE51FF8CF2C004BDF86 /* QHJSUiApi.m */,
+				4E745DE21FF8CEE5004BDF86 /* QHJSRuntimeApi.h */,
+				4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */,
+				4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */,
+				4E745DDF1FF8CE03004BDF86 /* QHJSDeviceApi.h */,
 				4E0D88451FF8ADF4006B40DA /* QHJSPageApi.h */,
 				4E0D88461FF8ADF4006B40DA /* QHJSPageApi.m */,
 				4E0D88471FF8ADF4006B40DA /* QHJSRegisterBaseClass.h */,
 				4E0D88481FF8ADF4006B40DA /* QHJSRegisterBaseClass.m */,
+				4E745DDC1FF8C145004BDF86 /* QHJSAuthApi.h */,
+				4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */,
 			);
 			path = hybirdAPI;
 			sourceTree = "<group>";
@@ -216,6 +243,33 @@
 				4E0D884F1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m */,
 			);
 			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		4E745DE91FF8D08F004BDF86 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DEE1FF8D6CE004BDF86 /* ui */,
+				4E745DEA1FF8D0D9004BDF86 /* utils */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		4E745DEA1FF8D0D9004BDF86 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DEB1FF8D14C004BDF86 /* QHDeviceUtil.h */,
+				4E745DEC1FF8D293004BDF86 /* QHDeviceUtil.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		4E745DEE1FF8D6CE004BDF86 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DEF1FF8D72B004BDF86 /* QHToast.h */,
+				4E745DF01FF8D72B004BDF86 /* QHToast.m */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +380,7 @@
 			files = (
 				4E0D880F1FF8AD63006B40DA /* LaunchScreen.storyboard in Resources */,
 				4E0D88681FF8B075006B40DA /* res in Resources */,
-				4E0D886A1FF8B18A006B40DA /* modules.plist in Resources */,
+				4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */,
 				4E0D880C1FF8AD63006B40DA /* Assets.xcassets in Resources */,
 				4E0D883B1FF8ADD1006B40DA /* TestViewController.xib in Resources */,
 			);
@@ -358,12 +412,18 @@
 				4E0D88551FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m in Sources */,
 				4E0D88541FF8ADF4006B40DA /* WebViewJavascriptBridge.m in Sources */,
 				4E0D886D1FF8B268006B40DA /* TestPayApi.m in Sources */,
+				4E745DF11FF8D72B004BDF86 /* QHToast.m in Sources */,
+				4E745DED1FF8D293004BDF86 /* QHDeviceUtil.m in Sources */,
 				4E0D88521FF8ADF4006B40DA /* QHJSPageApi.m in Sources */,
+				4E745DDE1FF8C199004BDF86 /* QHJSAuthApi.m in Sources */,
 				4E0D88391FF8ADD1006B40DA /* TestViewController.m in Sources */,
 				4E0D88121FF8AD63006B40DA /* main.m in Sources */,
+				4E745DE71FF8CF2D004BDF86 /* QHJSUiApi.m in Sources */,
+				4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */,
 				4E0D88531FF8ADF4006B40DA /* QHJSRegisterBaseClass.m in Sources */,
 				4E0D88041FF8AD63006B40DA /* AppDelegate.m in Sources */,
 				4E0D88511FF8ADF4006B40DA /* QHBaseWebLoader.m in Sources */,
+				4E745DE41FF8CEE5004BDF86 /* QHJSRuntimeApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

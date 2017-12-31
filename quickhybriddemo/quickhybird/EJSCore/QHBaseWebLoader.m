@@ -163,7 +163,9 @@ static NSString *KVOContext;
     } else {
         // 加载本地页面，iOS 8不支持
         if (DeviceVersion >= 9.0) {
-            NSURL *pathUrl = [NSURL fileURLWithPath:url];
+            //本地路径的html页面路径，如果含有参数，不能将?转码掉
+//            NSURL *pathUrl = [NSURL fileURLWithPath:url];
+            NSURL *pathUrl = [NSURL URLWithString:url];
             NSURL *bundleUrl = [[NSBundle mainBundle] bundleURL];
             [self.wv loadFileURL:pathUrl allowingReadAccessToURL:bundleUrl];
         } else {
@@ -296,6 +298,11 @@ static NSString *KVOContext;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self.wv removeObserver:self forKeyPath:@"title" context:&KVOContext];
     [self.wv removeObserver:self forKeyPath:@"estimatedProgress" context:&KVOContext];
+}
+
+- (BOOL)registerHandlersWithClassName:(NSString *)className
+                           moduleName:(NSString *)moduleName {
+    return [self.bridge registerHandlersWithClassName:className moduleName:moduleName];
 }
 
 - (BOOL)registerAccessWithClassName:(NSString *)className methodName:(NSString *)methodName {

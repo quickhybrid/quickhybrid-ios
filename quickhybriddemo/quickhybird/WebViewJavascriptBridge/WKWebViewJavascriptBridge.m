@@ -245,19 +245,11 @@
 
 - (void)registerQHJSFrameAPI {
     // 注册ui api
-//    [self registerHandlersWithClassName:@"EJSUIApi" moduleName:@"ui"];
     [self registerHandlersWithClassName:@"QHJSPageApi" moduleName:@"page"];
-//    [self registerHandlersWithClassName:@"EJSDeviceApi" moduleName:@"device"];
-//    [self registerHandlersWithClassName:@"EJSNavigatorApi" moduleName:@"navigator"];
-//    [self registerHandlersWithClassName:@"EJSEventApi" moduleName:@"event"];
-//    [self registerHandlersWithClassName:@"EJSStorageApi" moduleName:@"storage"];
-//    [self registerHandlersWithClassName:@"EJSAuthApi" moduleName:@"auth"];
-//    [self registerHandlersWithClassName:@"EJSRuntimeApi" moduleName:@"runtime"];
-//    [self registerHandlersWithClassName:@"EJSUtilApi" moduleName:@"util"];
-//    [self registerHandlersWithClassName:@"EJSStreamApi" moduleName:@"stream"];
-//    [self registerHandlersWithClassName:@"EJSAudioApi" moduleName:@"audio"];
-//    [self registerHandlersWithClassName:@"EJSIOApi" moduleName:@"io"];
-//    [self registerHandlersWithClassName:@"EJSGlobalApi" moduleName:@"global"];
+    [self registerHandlersWithClassName:@"QHJSRuntimeApi" moduleName:@"runtime"];
+    [self registerHandlersWithClassName:@"QHJSDeviceApi" moduleName:@"device"];
+    [self registerHandlersWithClassName:@"QHJSAuthApi" moduleName:@"auth"];
+    [self registerHandlersWithClassName:@"QHJSUiApi" moduleName:@"ui"];
 }
 
 - (void)handleErrorWithCode:(NSInteger)errorCode

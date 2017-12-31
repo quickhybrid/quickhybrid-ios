@@ -18,7 +18,11 @@
 
 - (void)pushNewVC:(UIViewController *)vc;
 
+- (BOOL)registerHandlersWithClassName:(NSString *)className
+                           moduleName:(NSString *)moduleName;
+
 // 注册Api方法的权限
-- (BOOL)registerAccessWithClassName:(NSString *)className methodName:(NSString *)methodName;
+- (BOOL)registerAccessWithClassName:(NSString *)className
+                         methodName:(NSString *)methodName;
 
 @end
