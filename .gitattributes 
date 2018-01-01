@@ -1,6 +1,6 @@
-*.swift linguist-language=objective-c
 *.m linguist-language=objective-c
 *.h linguist-language=objective-c
 *.js linguist-language=objective-c
 *.html linguist-language=objective-c
 *.css linguist-language=objective-c
+*.swift linguist-language=objective-c
