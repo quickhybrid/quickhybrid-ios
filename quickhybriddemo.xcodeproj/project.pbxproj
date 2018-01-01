@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E0D88041FF8AD63006B40DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88031FF8AD63006B40DA /* AppDelegate.m */; };
+		4E0D880C1FF8AD63006B40DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D880B1FF8AD63006B40DA /* Assets.xcassets */; };
+		4E0D880F1FF8AD63006B40DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D880D1FF8AD63006B40DA /* LaunchScreen.storyboard */; };
+		4E0D88121FF8AD63006B40DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88111FF8AD63006B40DA /* main.m */; };
+		4E0D881C1FF8AD63006B40DA /* quickhybriddemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D881B1FF8AD63006B40DA /* quickhybriddemoTests.m */; };
+		4E0D88271FF8AD63006B40DA /* quickhybriddemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88261FF8AD63006B40DA /* quickhybriddemoUITests.m */; };
+		4E0D88391FF8ADD1006B40DA /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88341FF8ADD1006B40DA /* TestViewController.m */; };
+		4E0D883B1FF8ADD1006B40DA /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88371FF8ADD1006B40DA /* TestViewController.xib */; };
+		4E0D88501FF8ADF4006B40DA /* QHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88401FF8ADF4006B40DA /* QHBaseViewController.m */; };
+		4E0D88511FF8ADF4006B40DA /* QHBaseWebLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88431FF8ADF4006B40DA /* QHBaseWebLoader.m */; };
+		4E0D88521FF8ADF4006B40DA /* QHJSPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88461FF8ADF4006B40DA /* QHJSPageApi.m */; };
+		4E0D88531FF8ADF4006B40DA /* QHJSRegisterBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88481FF8ADF4006B40DA /* QHJSRegisterBaseClass.m */; };
+		4E0D88541FF8ADF4006B40DA /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D884B1FF8ADF4006B40DA /* WebViewJavascriptBridge.m */; };
+		4E0D88551FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D884D1FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m */; };
+		4E0D88561FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D884F1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m */; };
+		4E0D88681FF8B075006B40DA /* res in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88671FF8B075006B40DA /* res */; };
+		4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */; };
+		4E0D886D1FF8B268006B40DA /* TestPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D886C1FF8B268006B40DA /* TestPayApi.m */; };
+		4E44168E1FF9D8FF00E105AD /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E44168C1FF9D8FF00E105AD /* HelloViewController.m */; };
+		4E44168F1FF9D8FF00E105AD /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44168D1FF9D8FF00E105AD /* HelloViewController.xib */; };
+		4E745DDE1FF8C199004BDF86 /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */; };
+		4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */; };
+		4E745DE41FF8CEE5004BDF86 /* QHJSRuntimeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */; };
+		4E745DE71FF8CF2D004BDF86 /* QHJSUiApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE51FF8CF2C004BDF86 /* QHJSUiApi.m */; };
+		4E745DED1FF8D293004BDF86 /* QHDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DEC1FF8D293004BDF86 /* QHDeviceUtil.m */; };
+		4E745DF11FF8D72B004BDF86 /* QHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DF01FF8D72B004BDF86 /* QHToast.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E0D88181FF8AD63006B40DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0D87F71FF8AD63006B40DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E0D87FE1FF8AD63006B40DA;
+			remoteInfo = quickhybriddemo;
+		};
+		4E0D88231FF8AD63006B40DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0D87F71FF8AD63006B40DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E0D87FE1FF8AD63006B40DA;
+			remoteInfo = quickhybriddemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E0D87FF1FF8AD63006B40DA /* quickhybriddemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quickhybriddemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0D88021FF8AD63006B40DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4E0D88031FF8AD63006B40DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4E0D880B1FF8AD63006B40DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E0D880E1FF8AD63006B40DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E0D88101FF8AD63006B40DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0D88111FF8AD63006B40DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E0D88171FF8AD63006B40DA /* quickhybriddemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quickhybriddemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0D881B1FF8AD63006B40DA /* quickhybriddemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quickhybriddemoTests.m; sourceTree = "<group>"; };
+		4E0D881D1FF8AD63006B40DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0D88221FF8AD63006B40DA /* quickhybriddemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quickhybriddemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0D88261FF8AD63006B40DA /* quickhybriddemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quickhybriddemoUITests.m; sourceTree = "<group>"; };
+		4E0D88281FF8AD63006B40DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0D88341FF8ADD1006B40DA /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4E0D88361FF8ADD1006B40DA /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4E0D88371FF8ADD1006B40DA /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		4E0D883F1FF8ADF4006B40DA /* QHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHBaseViewController.h; sourceTree = "<group>"; };
+		4E0D88401FF8ADF4006B40DA /* QHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHBaseViewController.m; sourceTree = "<group>"; };
+		4E0D88421FF8ADF4006B40DA /* QHBaseWebLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHBaseWebLoader.h; sourceTree = "<group>"; };
+		4E0D88431FF8ADF4006B40DA /* QHBaseWebLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHBaseWebLoader.m; sourceTree = "<group>"; };
+		4E0D88451FF8ADF4006B40DA /* QHJSPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSPageApi.h; sourceTree = "<group>"; };
+		4E0D88461FF8ADF4006B40DA /* QHJSPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSPageApi.m; sourceTree = "<group>"; };
+		4E0D88471FF8ADF4006B40DA /* QHJSRegisterBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRegisterBaseClass.h; sourceTree = "<group>"; };
+		4E0D88481FF8ADF4006B40DA /* QHJSRegisterBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRegisterBaseClass.m; sourceTree = "<group>"; };
+		4E0D884A1FF8ADF4006B40DA /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		4E0D884B1FF8ADF4006B40DA /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		4E0D884C1FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		4E0D884D1FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		4E0D884E1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		4E0D884F1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		4E0D88671FF8B075006B40DA /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = qhjsmodules.plist; sourceTree = "<group>"; };
+		4E0D886B1FF8B268006B40DA /* TestPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPayApi.h; sourceTree = "<group>"; };
+		4E0D886C1FF8B268006B40DA /* TestPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPayApi.m; sourceTree = "<group>"; };
+		4E44168B1FF9D8FF00E105AD /* HelloViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloViewController.h; sourceTree = "<group>"; };
+		4E44168C1FF9D8FF00E105AD /* HelloViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloViewController.m; sourceTree = "<group>"; };
+		4E44168D1FF9D8FF00E105AD /* HelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
+		4E745DDC1FF8C145004BDF86 /* QHJSAuthApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
+		4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSAuthApi.m; sourceTree = "<group>"; };
+		4E745DDF1FF8CE03004BDF86 /* QHJSDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceApi.h; sourceTree = "<group>"; };
+		4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSDeviceApi.m; sourceTree = "<group>"; };
+		4E745DE21FF8CEE5004BDF86 /* QHJSRuntimeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRuntimeApi.h; sourceTree = "<group>"; };
+		4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRuntimeApi.m; sourceTree = "<group>"; };
+		4E745DE51FF8CF2C004BDF86 /* QHJSUiApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSUiApi.m; sourceTree = "<group>"; };
+		4E745DE61FF8CF2D004BDF86 /* QHJSUiApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSUiApi.h; sourceTree = "<group>"; };
+		4E745DEB1FF8D14C004BDF86 /* QHDeviceUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHDeviceUtil.h; sourceTree = "<group>"; };
+		4E745DEC1FF8D293004BDF86 /* QHDeviceUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHDeviceUtil.m; sourceTree = "<group>"; };
+		4E745DEF1FF8D72B004BDF86 /* QHToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHToast.h; sourceTree = "<group>"; };
+		4E745DF01FF8D72B004BDF86 /* QHToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHToast.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E0D87FC1FF8AD63006B40DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0D88141FF8AD63006B40DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0D881F1FF8AD63006B40DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E0D87F61FF8AD63006B40DA = {
+			isa = PBXGroup;
+			children = (
+				4E0D88011FF8AD63006B40DA /* quickhybriddemo */,
+				4E0D881A1FF8AD63006B40DA /* quickhybriddemoTests */,
+				4E0D88251FF8AD63006B40DA /* quickhybriddemoUITests */,
+				4E0D88001FF8AD63006B40DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E0D88001FF8AD63006B40DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D87FF1FF8AD63006B40DA /* quickhybriddemo.app */,
+				4E0D88171FF8AD63006B40DA /* quickhybriddemoTests.xctest */,
+				4E0D88221FF8AD63006B40DA /* quickhybriddemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E0D88011FF8AD63006B40DA /* quickhybriddemo */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D88021FF8AD63006B40DA /* AppDelegate.h */,
+				4E0D88031FF8AD63006B40DA /* AppDelegate.m */,
+				4E0D88361FF8ADD1006B40DA /* TestViewController.h */,
+				4E0D88341FF8ADD1006B40DA /* TestViewController.m */,
+				4E0D88371FF8ADD1006B40DA /* TestViewController.xib */,
+				4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */,
+				4E0D886B1FF8B268006B40DA /* TestPayApi.h */,
+				4E0D886C1FF8B268006B40DA /* TestPayApi.m */,
+				4E44168B1FF9D8FF00E105AD /* HelloViewController.h */,
+				4E44168C1FF9D8FF00E105AD /* HelloViewController.m */,
+				4E44168D1FF9D8FF00E105AD /* HelloViewController.xib */,
+				4E0D88671FF8B075006B40DA /* res */,
+				4E745DE91FF8D08F004BDF86 /* core */,
+				4E0D883D1FF8ADF4006B40DA /* quickhybird */,
+				4E0D880B1FF8AD63006B40DA /* Assets.xcassets */,
+				4E0D880D1FF8AD63006B40DA /* LaunchScreen.storyboard */,
+				4E0D88101FF8AD63006B40DA /* Info.plist */,
+				4E0D88111FF8AD63006B40DA /* main.m */,
+			);
+			path = quickhybriddemo;
+			sourceTree = "<group>";
+		};
+		4E0D881A1FF8AD63006B40DA /* quickhybriddemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D881B1FF8AD63006B40DA /* quickhybriddemoTests.m */,
+				4E0D881D1FF8AD63006B40DA /* Info.plist */,
+			);
+			path = quickhybriddemoTests;
+			sourceTree = "<group>";
+		};
+		4E0D88251FF8AD63006B40DA /* quickhybriddemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D88261FF8AD63006B40DA /* quickhybriddemoUITests.m */,
+				4E0D88281FF8AD63006B40DA /* Info.plist */,
+			);
+			path = quickhybriddemoUITests;
+			sourceTree = "<group>";
+		};
+		4E0D883D1FF8ADF4006B40DA /* quickhybird */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D883E1FF8ADF4006B40DA /* BaseCore */,
+				4E0D88411FF8ADF4006B40DA /* EJSCore */,
+				4E0D88441FF8ADF4006B40DA /* hybirdAPI */,
+				4E0D88491FF8ADF4006B40DA /* WebViewJavascriptBridge */,
+			);
+			path = quickhybird;
+			sourceTree = "<group>";
+		};
+		4E0D883E1FF8ADF4006B40DA /* BaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D883F1FF8ADF4006B40DA /* QHBaseViewController.h */,
+				4E0D88401FF8ADF4006B40DA /* QHBaseViewController.m */,
+			);
+			path = BaseCore;
+			sourceTree = "<group>";
+		};
+		4E0D88411FF8ADF4006B40DA /* EJSCore */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D88421FF8ADF4006B40DA /* QHBaseWebLoader.h */,
+				4E0D88431FF8ADF4006B40DA /* QHBaseWebLoader.m */,
+			);
+			path = EJSCore;
+			sourceTree = "<group>";
+		};
+		4E0D88441FF8ADF4006B40DA /* hybirdAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DE61FF8CF2D004BDF86 /* QHJSUiApi.h */,
+				4E745DE51FF8CF2C004BDF86 /* QHJSUiApi.m */,
+				4E745DE21FF8CEE5004BDF86 /* QHJSRuntimeApi.h */,
+				4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */,
+				4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */,
+				4E745DDF1FF8CE03004BDF86 /* QHJSDeviceApi.h */,
+				4E0D88451FF8ADF4006B40DA /* QHJSPageApi.h */,
+				4E0D88461FF8ADF4006B40DA /* QHJSPageApi.m */,
+				4E0D88471FF8ADF4006B40DA /* QHJSRegisterBaseClass.h */,
+				4E0D88481FF8ADF4006B40DA /* QHJSRegisterBaseClass.m */,
+				4E745DDC1FF8C145004BDF86 /* QHJSAuthApi.h */,
+				4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */,
+			);
+			path = hybirdAPI;
+			sourceTree = "<group>";
+		};
+		4E0D88491FF8ADF4006B40DA /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D884A1FF8ADF4006B40DA /* WebViewJavascriptBridge.h */,
+				4E0D884B1FF8ADF4006B40DA /* WebViewJavascriptBridge.m */,
+				4E0D884C1FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.h */,
+				4E0D884D1FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m */,
+				4E0D884E1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.h */,
+				4E0D884F1FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		4E745DE91FF8D08F004BDF86 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DEE1FF8D6CE004BDF86 /* ui */,
+				4E745DEA1FF8D0D9004BDF86 /* utils */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		4E745DEA1FF8D0D9004BDF86 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DEB1FF8D14C004BDF86 /* QHDeviceUtil.h */,
+				4E745DEC1FF8D293004BDF86 /* QHDeviceUtil.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		4E745DEE1FF8D6CE004BDF86 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4E745DEF1FF8D72B004BDF86 /* QHToast.h */,
+				4E745DF01FF8D72B004BDF86 /* QHToast.m */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E0D87FE1FF8AD63006B40DA /* quickhybriddemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0D882B1FF8AD63006B40DA /* Build configuration list for PBXNativeTarget "quickhybriddemo" */;
+			buildPhases = (
+				4E0D87FB1FF8AD63006B40DA /* Sources */,
+				4E0D87FC1FF8AD63006B40DA /* Frameworks */,
+				4E0D87FD1FF8AD63006B40DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quickhybriddemo;
+			productName = quickhybriddemo;
+			productReference = 4E0D87FF1FF8AD63006B40DA /* quickhybriddemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E0D88161FF8AD63006B40DA /* quickhybriddemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0D882E1FF8AD63006B40DA /* Build configuration list for PBXNativeTarget "quickhybriddemoTests" */;
+			buildPhases = (
+				4E0D88131FF8AD63006B40DA /* Sources */,
+				4E0D88141FF8AD63006B40DA /* Frameworks */,
+				4E0D88151FF8AD63006B40DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E0D88191FF8AD63006B40DA /* PBXTargetDependency */,
+			);
+			name = quickhybriddemoTests;
+			productName = quickhybriddemoTests;
+			productReference = 4E0D88171FF8AD63006B40DA /* quickhybriddemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4E0D88211FF8AD63006B40DA /* quickhybriddemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0D88311FF8AD63006B40DA /* Build configuration list for PBXNativeTarget "quickhybriddemoUITests" */;
+			buildPhases = (
+				4E0D881E1FF8AD63006B40DA /* Sources */,
+				4E0D881F1FF8AD63006B40DA /* Frameworks */,
+				4E0D88201FF8AD63006B40DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E0D88241FF8AD63006B40DA /* PBXTargetDependency */,
+			);
+			name = quickhybriddemoUITests;
+			productName = quickhybriddemoUITests;
+			productReference = 4E0D88221FF8AD63006B40DA /* quickhybriddemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E0D87F71FF8AD63006B40DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = quickhybrid;
+				TargetAttributes = {
+					4E0D87FE1FF8AD63006B40DA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					4E0D88161FF8AD63006B40DA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4E0D87FE1FF8AD63006B40DA;
+					};
+					4E0D88211FF8AD63006B40DA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4E0D87FE1FF8AD63006B40DA;
+					};
+				};
+			};
+			buildConfigurationList = 4E0D87FA1FF8AD63006B40DA /* Build configuration list for PBXProject "quickhybriddemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E0D87F61FF8AD63006B40DA;
+			productRefGroup = 4E0D88001FF8AD63006B40DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E0D87FE1FF8AD63006B40DA /* quickhybriddemo */,
+				4E0D88161FF8AD63006B40DA /* quickhybriddemoTests */,
+				4E0D88211FF8AD63006B40DA /* quickhybriddemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E0D87FD1FF8AD63006B40DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0D880F1FF8AD63006B40DA /* LaunchScreen.storyboard in Resources */,
+				4E0D88681FF8B075006B40DA /* res in Resources */,
+				4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */,
+				4E44168F1FF9D8FF00E105AD /* HelloViewController.xib in Resources */,
+				4E0D880C1FF8AD63006B40DA /* Assets.xcassets in Resources */,
+				4E0D883B1FF8ADD1006B40DA /* TestViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0D88151FF8AD63006B40DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0D88201FF8AD63006B40DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E0D87FB1FF8AD63006B40DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0D88501FF8ADF4006B40DA /* QHBaseViewController.m in Sources */,
+				4E0D88561FF8ADF4006B40DA /* WKWebViewJavascriptBridge.m in Sources */,
+				4E0D88551FF8ADF4006B40DA /* WebViewJavascriptBridgeBase.m in Sources */,
+				4E0D88541FF8ADF4006B40DA /* WebViewJavascriptBridge.m in Sources */,
+				4E0D886D1FF8B268006B40DA /* TestPayApi.m in Sources */,
+				4E745DF11FF8D72B004BDF86 /* QHToast.m in Sources */,
+				4E745DED1FF8D293004BDF86 /* QHDeviceUtil.m in Sources */,
+				4E0D88521FF8ADF4006B40DA /* QHJSPageApi.m in Sources */,
+				4E745DDE1FF8C199004BDF86 /* QHJSAuthApi.m in Sources */,
+				4E0D88391FF8ADD1006B40DA /* TestViewController.m in Sources */,
+				4E0D88121FF8AD63006B40DA /* main.m in Sources */,
+				4E745DE71FF8CF2D004BDF86 /* QHJSUiApi.m in Sources */,
+				4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */,
+				4E0D88531FF8ADF4006B40DA /* QHJSRegisterBaseClass.m in Sources */,
+				4E0D88041FF8AD63006B40DA /* AppDelegate.m in Sources */,
+				4E44168E1FF9D8FF00E105AD /* HelloViewController.m in Sources */,
+				4E0D88511FF8ADF4006B40DA /* QHBaseWebLoader.m in Sources */,
+				4E745DE41FF8CEE5004BDF86 /* QHJSRuntimeApi.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0D88131FF8AD63006B40DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0D881C1FF8AD63006B40DA /* quickhybriddemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E0D881E1FF8AD63006B40DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0D88271FF8AD63006B40DA /* quickhybriddemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E0D88191FF8AD63006B40DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E0D87FE1FF8AD63006B40DA /* quickhybriddemo */;
+			targetProxy = 4E0D88181FF8AD63006B40DA /* PBXContainerItemProxy */;
+		};
+		4E0D88241FF8AD63006B40DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E0D87FE1FF8AD63006B40DA /* quickhybriddemo */;
+			targetProxy = 4E0D88231FF8AD63006B40DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E0D880D1FF8AD63006B40DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E0D880E1FF8AD63006B40DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E0D88291FF8AD63006B40DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4E0D882A1FF8AD63006B40DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E0D882C1FF8AD63006B40DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quickhybriddemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.quickhybriddemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E0D882D1FF8AD63006B40DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quickhybriddemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.quickhybriddemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4E0D882F1FF8AD63006B40DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quickhybriddemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.quickhybriddemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quickhybriddemo.app/quickhybriddemo";
+			};
+			name = Debug;
+		};
+		4E0D88301FF8AD63006B40DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quickhybriddemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.quickhybriddemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quickhybriddemo.app/quickhybriddemo";
+			};
+			name = Release;
+		};
+		4E0D88321FF8AD63006B40DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quickhybriddemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.quickhybriddemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = quickhybriddemo;
+			};
+			name = Debug;
+		};
+		4E0D88331FF8AD63006B40DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = quickhybriddemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.quickhybriddemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = quickhybriddemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E0D87FA1FF8AD63006B40DA /* Build configuration list for PBXProject "quickhybriddemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0D88291FF8AD63006B40DA /* Debug */,
+				4E0D882A1FF8AD63006B40DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E0D882B1FF8AD63006B40DA /* Build configuration list for PBXNativeTarget "quickhybriddemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0D882C1FF8AD63006B40DA /* Debug */,
+				4E0D882D1FF8AD63006B40DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E0D882E1FF8AD63006B40DA /* Build configuration list for PBXNativeTarget "quickhybriddemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0D882F1FF8AD63006B40DA /* Debug */,
+				4E0D88301FF8AD63006B40DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E0D88311FF8AD63006B40DA /* Build configuration list for PBXNativeTarget "quickhybriddemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0D88321FF8AD63006B40DA /* Debug */,
+				4E0D88331FF8AD63006B40DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E0D87F71FF8AD63006B40DA /* Project object */;
+}
