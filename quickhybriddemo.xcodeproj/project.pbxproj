@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0D883E1FF8ADF4006B40DA /* BaseCore */,
-				4E0D88411FF8ADF4006B40DA /* EJSCore */,
+				4E0D88411FF8ADF4006B40DA /* QHJSCore */,
 				4E0D88441FF8ADF4006B40DA /* hybirdAPI */,
 				4E0D88491FF8ADF4006B40DA /* WebViewJavascriptBridge */,
 			);
@@ -212,13 +212,13 @@
 			path = BaseCore;
 			sourceTree = "<group>";
 		};
-		4E0D88411FF8ADF4006B40DA /* EJSCore */ = {
+		4E0D88411FF8ADF4006B40DA /* QHJSCore */ = {
 			isa = PBXGroup;
 			children = (
 				4E0D88421FF8ADF4006B40DA /* QHBaseWebLoader.h */,
 				4E0D88431FF8ADF4006B40DA /* QHBaseWebLoader.m */,
 			);
-			path = EJSCore;
+			path = QHJSCore;
 			sourceTree = "<group>";
 		};
 		4E0D88441FF8ADF4006B40DA /* hybirdAPI */ = {
