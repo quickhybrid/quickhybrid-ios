@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) WKWebView *wv;
 
+@property (weak, nonatomic) UIViewController *superVC;
+
 - (void)presentNewVC:(UIViewController *)vc animated:(BOOL)animated;
 
 - (void)pushNewVC:(UIViewController *)vc;
@@ -24,5 +26,9 @@
 // 注册Api方法的权限
 - (BOOL)registerAccessWithClassName:(NSString *)className
                          methodName:(NSString *)methodName;
+
+- (void)backAction;
+
+- (void)reloadWKWebview;
 
 @end

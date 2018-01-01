@@ -25,6 +25,8 @@
 		4E0D88681FF8B075006B40DA /* res in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88671FF8B075006B40DA /* res */; };
 		4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */; };
 		4E0D886D1FF8B268006B40DA /* TestPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D886C1FF8B268006B40DA /* TestPayApi.m */; };
+		4E44168E1FF9D8FF00E105AD /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E44168C1FF9D8FF00E105AD /* HelloViewController.m */; };
+		4E44168F1FF9D8FF00E105AD /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44168D1FF9D8FF00E105AD /* HelloViewController.xib */; };
 		4E745DDE1FF8C199004BDF86 /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */; };
 		4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE01FF8CE4F004BDF86 /* QHJSDeviceApi.m */; };
 		4E745DE41FF8CEE5004BDF86 /* QHJSRuntimeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E745DE31FF8CEE5004BDF86 /* QHJSRuntimeApi.m */; };
@@ -85,6 +87,9 @@
 		4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = qhjsmodules.plist; sourceTree = "<group>"; };
 		4E0D886B1FF8B268006B40DA /* TestPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPayApi.h; sourceTree = "<group>"; };
 		4E0D886C1FF8B268006B40DA /* TestPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPayApi.m; sourceTree = "<group>"; };
+		4E44168B1FF9D8FF00E105AD /* HelloViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloViewController.h; sourceTree = "<group>"; };
+		4E44168C1FF9D8FF00E105AD /* HelloViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloViewController.m; sourceTree = "<group>"; };
+		4E44168D1FF9D8FF00E105AD /* HelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
 		4E745DDC1FF8C145004BDF86 /* QHJSAuthApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
 		4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSAuthApi.m; sourceTree = "<group>"; };
 		4E745DDF1FF8CE03004BDF86 /* QHJSDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceApi.h; sourceTree = "<group>"; };
@@ -155,6 +160,9 @@
 				4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */,
 				4E0D886B1FF8B268006B40DA /* TestPayApi.h */,
 				4E0D886C1FF8B268006B40DA /* TestPayApi.m */,
+				4E44168B1FF9D8FF00E105AD /* HelloViewController.h */,
+				4E44168C1FF9D8FF00E105AD /* HelloViewController.m */,
+				4E44168D1FF9D8FF00E105AD /* HelloViewController.xib */,
 				4E0D88671FF8B075006B40DA /* res */,
 				4E745DE91FF8D08F004BDF86 /* core */,
 				4E0D883D1FF8ADF4006B40DA /* quickhybird */,
@@ -381,6 +389,7 @@
 				4E0D880F1FF8AD63006B40DA /* LaunchScreen.storyboard in Resources */,
 				4E0D88681FF8B075006B40DA /* res in Resources */,
 				4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */,
+				4E44168F1FF9D8FF00E105AD /* HelloViewController.xib in Resources */,
 				4E0D880C1FF8AD63006B40DA /* Assets.xcassets in Resources */,
 				4E0D883B1FF8ADD1006B40DA /* TestViewController.xib in Resources */,
 			);
@@ -422,6 +431,7 @@
 				4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */,
 				4E0D88531FF8ADF4006B40DA /* QHJSRegisterBaseClass.m in Sources */,
 				4E0D88041FF8AD63006B40DA /* AppDelegate.m in Sources */,
+				4E44168E1FF9D8FF00E105AD /* HelloViewController.m in Sources */,
 				4E0D88511FF8ADF4006B40DA /* QHBaseWebLoader.m in Sources */,
 				4E745DE41FF8CEE5004BDF86 /* QHJSRuntimeApi.m in Sources */,
 			);

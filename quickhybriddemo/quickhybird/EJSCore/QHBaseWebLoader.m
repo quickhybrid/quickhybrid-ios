@@ -65,7 +65,11 @@ static NSString *KVOContext;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    if ([[[self.params valueForKey:@"pageStyle"] stringValue] isEqualToString:@"-1"]) {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    } else {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -74,6 +78,7 @@ static NSString *KVOContext;
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -308,6 +313,22 @@ static NSString *KVOContext;
 - (BOOL)registerAccessWithClassName:(NSString *)className methodName:(NSString *)methodName {
     [self.bridge registerHandlersWithAccess:className handlerName:methodName];
     return YES;
+}
+
+-(void)backAction{
+    __weak typeof(self) weakSelf = self;
+    if (weakSelf.superVC) {
+        // 如果存在superVC,说明当前容器是“多个EJS容器”类型
+        [weakSelf.superVC.navigationController popViewControllerAnimated:YES];
+    } else {
+        // 如果不存在superVC，说明当前容器是普通容器，直接获取navigationController然后push
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }
+    NSLog(@"BaseWebLoader back Action");
+}
+
+- (void)reloadWKWebview {
+    [self.wv reload];
 }
 
 @end
