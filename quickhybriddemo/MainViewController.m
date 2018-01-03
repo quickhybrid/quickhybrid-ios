@@ -6,14 +6,14 @@
 //  Copyright © 2017年 com.gh. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "MainViewController.h"
 #import "QHBaseWebLoader.h"
 
-@interface TestViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation TestViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

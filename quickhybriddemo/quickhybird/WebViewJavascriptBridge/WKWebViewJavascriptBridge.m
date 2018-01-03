@@ -205,7 +205,7 @@
     }
     
     [_base excuteMsg:msgDic];
-//    EJSDataRcoredUtil *util = [EJSDataRcoredUtil sharedRecordUtil];
+//    QuickDataRcoredUtil *util = [QuickataRcoredUtil sharedRecordUtil];
 //    [util writeToDataRecordWith:moduleName and:handlerName];
     
 //    NSString *excuteMsg = [NSString stringWithFormat:@"[{\"%@\":\"%@\", \"%@\":\"%@\", \"%@\":%@}]", @"handlerName", handlerName, @"callbackId", callbackId, @"data", data];

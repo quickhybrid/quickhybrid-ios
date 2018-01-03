@@ -13,8 +13,8 @@
 		4E0D88121FF8AD63006B40DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88111FF8AD63006B40DA /* main.m */; };
 		4E0D881C1FF8AD63006B40DA /* quickhybriddemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D881B1FF8AD63006B40DA /* quickhybriddemoTests.m */; };
 		4E0D88271FF8AD63006B40DA /* quickhybriddemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88261FF8AD63006B40DA /* quickhybriddemoUITests.m */; };
-		4E0D88391FF8ADD1006B40DA /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88341FF8ADD1006B40DA /* TestViewController.m */; };
-		4E0D883B1FF8ADD1006B40DA /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88371FF8ADD1006B40DA /* TestViewController.xib */; };
+		4E0D88391FF8ADD1006B40DA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88341FF8ADD1006B40DA /* MainViewController.m */; };
+		4E0D883B1FF8ADD1006B40DA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D88371FF8ADD1006B40DA /* MainViewController.xib */; };
 		4E0D88501FF8ADF4006B40DA /* QHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88401FF8ADF4006B40DA /* QHBaseViewController.m */; };
 		4E0D88511FF8ADF4006B40DA /* QHBaseWebLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88431FF8ADF4006B40DA /* QHBaseWebLoader.m */; };
 		4E0D88521FF8ADF4006B40DA /* QHJSPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D88461FF8ADF4006B40DA /* QHJSPageApi.m */; };
@@ -66,9 +66,9 @@
 		4E0D88221FF8AD63006B40DA /* quickhybriddemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quickhybriddemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0D88261FF8AD63006B40DA /* quickhybriddemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quickhybriddemoUITests.m; sourceTree = "<group>"; };
 		4E0D88281FF8AD63006B40DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E0D88341FF8ADD1006B40DA /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		4E0D88361FF8ADD1006B40DA /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		4E0D88371FF8ADD1006B40DA /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		4E0D88341FF8ADD1006B40DA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4E0D88361FF8ADD1006B40DA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4E0D88371FF8ADD1006B40DA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		4E0D883F1FF8ADF4006B40DA /* QHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHBaseViewController.h; sourceTree = "<group>"; };
 		4E0D88401FF8ADF4006B40DA /* QHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHBaseViewController.m; sourceTree = "<group>"; };
 		4E0D88421FF8ADF4006B40DA /* QHBaseWebLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHBaseWebLoader.h; sourceTree = "<group>"; };
@@ -154,9 +154,9 @@
 			children = (
 				4E0D88021FF8AD63006B40DA /* AppDelegate.h */,
 				4E0D88031FF8AD63006B40DA /* AppDelegate.m */,
-				4E0D88361FF8ADD1006B40DA /* TestViewController.h */,
-				4E0D88341FF8ADD1006B40DA /* TestViewController.m */,
-				4E0D88371FF8ADD1006B40DA /* TestViewController.xib */,
+				4E0D88361FF8ADD1006B40DA /* MainViewController.h */,
+				4E0D88341FF8ADD1006B40DA /* MainViewController.m */,
+				4E0D88371FF8ADD1006B40DA /* MainViewController.xib */,
 				4E0D88691FF8B18A006B40DA /* qhjsmodules.plist */,
 				4E0D886B1FF8B268006B40DA /* TestPayApi.h */,
 				4E0D886C1FF8B268006B40DA /* TestPayApi.m */,
@@ -195,33 +195,33 @@
 		4E0D883D1FF8ADF4006B40DA /* quickhybird */ = {
 			isa = PBXGroup;
 			children = (
-				4E0D883E1FF8ADF4006B40DA /* BaseCore */,
-				4E0D88411FF8ADF4006B40DA /* QHJSCore */,
-				4E0D88441FF8ADF4006B40DA /* hybirdAPI */,
+				4E0D883E1FF8ADF4006B40DA /* basecore */,
+				4E0D88411FF8ADF4006B40DA /* quickcore */,
+				4E0D88441FF8ADF4006B40DA /* api */,
 				4E0D88491FF8ADF4006B40DA /* WebViewJavascriptBridge */,
 			);
 			path = quickhybird;
 			sourceTree = "<group>";
 		};
-		4E0D883E1FF8ADF4006B40DA /* BaseCore */ = {
+		4E0D883E1FF8ADF4006B40DA /* basecore */ = {
 			isa = PBXGroup;
 			children = (
 				4E0D883F1FF8ADF4006B40DA /* QHBaseViewController.h */,
 				4E0D88401FF8ADF4006B40DA /* QHBaseViewController.m */,
 			);
-			path = BaseCore;
+			path = basecore;
 			sourceTree = "<group>";
 		};
-		4E0D88411FF8ADF4006B40DA /* QHJSCore */ = {
+		4E0D88411FF8ADF4006B40DA /* quickcore */ = {
 			isa = PBXGroup;
 			children = (
 				4E0D88421FF8ADF4006B40DA /* QHBaseWebLoader.h */,
 				4E0D88431FF8ADF4006B40DA /* QHBaseWebLoader.m */,
 			);
-			path = QHJSCore;
+			path = quickcore;
 			sourceTree = "<group>";
 		};
-		4E0D88441FF8ADF4006B40DA /* hybirdAPI */ = {
+		4E0D88441FF8ADF4006B40DA /* api */ = {
 			isa = PBXGroup;
 			children = (
 				4E745DE61FF8CF2D004BDF86 /* QHJSUiApi.h */,
@@ -237,7 +237,7 @@
 				4E745DDC1FF8C145004BDF86 /* QHJSAuthApi.h */,
 				4E745DDD1FF8C199004BDF86 /* QHJSAuthApi.m */,
 			);
-			path = hybirdAPI;
+			path = api;
 			sourceTree = "<group>";
 		};
 		4E0D88491FF8ADF4006B40DA /* WebViewJavascriptBridge */ = {
@@ -391,7 +391,7 @@
 				4E0D886A1FF8B18A006B40DA /* qhjsmodules.plist in Resources */,
 				4E44168F1FF9D8FF00E105AD /* HelloViewController.xib in Resources */,
 				4E0D880C1FF8AD63006B40DA /* Assets.xcassets in Resources */,
-				4E0D883B1FF8ADD1006B40DA /* TestViewController.xib in Resources */,
+				4E0D883B1FF8ADD1006B40DA /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +425,7 @@
 				4E745DED1FF8D293004BDF86 /* QHDeviceUtil.m in Sources */,
 				4E0D88521FF8ADF4006B40DA /* QHJSPageApi.m in Sources */,
 				4E745DDE1FF8C199004BDF86 /* QHJSAuthApi.m in Sources */,
-				4E0D88391FF8ADD1006B40DA /* TestViewController.m in Sources */,
+				4E0D88391FF8ADD1006B40DA /* MainViewController.m in Sources */,
 				4E0D88121FF8AD63006B40DA /* main.m in Sources */,
 				4E745DE71FF8CF2D004BDF86 /* QHJSUiApi.m in Sources */,
 				4E745DE11FF8CE4F004BDF86 /* QHJSDeviceApi.m in Sources */,

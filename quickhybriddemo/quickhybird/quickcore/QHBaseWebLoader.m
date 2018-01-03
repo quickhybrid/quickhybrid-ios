@@ -32,8 +32,9 @@ static NSString *KVOContext;
         //获取默认UA
         NSString *defaultUA = [[UIWebView new] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
         
-        NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
+        // NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
         
+        NSString *version = @"1.0.0";
         NSString *customerUA = [defaultUA stringByAppendingString:[NSString stringWithFormat:@" QuickHybridJs/%@", version]];
         
         [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"UserAgent":customerUA}];
@@ -318,7 +319,7 @@ static NSString *KVOContext;
 -(void)backAction{
     __weak typeof(self) weakSelf = self;
     if (weakSelf.superVC) {
-        // 如果存在superVC,说明当前容器是“多个EJS容器”类型
+        // 如果存在superVC,说明当前容器是“多个Quick容器”类型
         [weakSelf.superVC.navigationController popViewControllerAnimated:YES];
     } else {
         // 如果不存在superVC，说明当前容器是普通容器，直接获取navigationController然后push
