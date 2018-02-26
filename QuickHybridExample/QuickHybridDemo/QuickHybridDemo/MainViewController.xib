@@ -27,11 +27,12 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0lW-iI-kOh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BcY-DW-Jjj"/>
                 <constraint firstItem="0lW-iI-kOh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nsr-Ut-gkO"/>
             </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

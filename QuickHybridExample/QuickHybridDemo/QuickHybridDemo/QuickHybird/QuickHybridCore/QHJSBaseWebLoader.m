@@ -2,13 +2,13 @@
 //  QHJSBaseWebLoader.m
 //  QuickHybirdJSBridgeDemo
 //
-//  Created by 管浩 on 2017/12/30.
+//  Created by guanhao on 2017/12/30.
 //  Copyright © 2017年 com.gh. All rights reserved.
 //
 
 #import "QHJSBaseWebLoader.h"
 #import "WKWebViewJavascriptBridge.h"
-#import "QHJSCommonTool.h"
+#import "QHJSInfo.h"
 
 static NSString *KVOContext;
 
@@ -35,7 +35,7 @@ static NSString *KVOContext;
         NSString *defaultUA = [[UIWebView new] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
         
         //设置UA，格式和
-        NSString *version = [QHJSCommonTool getQHJSVersion];
+        NSString *version = [QHJSInfo getQHJSVersion];
         NSString *customerUA = [defaultUA stringByAppendingString:[NSString stringWithFormat:@" QuickHybridJs/%@", version]];
         
         [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"UserAgent":customerUA}];

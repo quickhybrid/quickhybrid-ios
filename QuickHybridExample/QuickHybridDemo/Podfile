@@ -1,0 +1,7 @@
+platform :ios, ‘8.0'
+
+target 'QuickHybridDemo' do
+
+  pod 'WSProgressHUD', '1.1.3'
+
+end

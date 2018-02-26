@@ -113,10 +113,11 @@
 - (void)registerFrameAPI {
     // 注册ui api
     [self registerHandlersWithClassName:@"QHJSPageApi" moduleName:@"page"];
+    [self registerHandlersWithClassName:@"QHJSUIApi" moduleName:@"ui"];
+    [self registerHandlersWithClassName:@"QHJSNavigatorApi" moduleName:@"navigator"];
     [self registerHandlersWithClassName:@"QHJSRuntimeApi" moduleName:@"runtime"];
     [self registerHandlersWithClassName:@"QHJSDeviceApi" moduleName:@"device"];
     [self registerHandlersWithClassName:@"QHJSAuthApi" moduleName:@"auth"];
-    [self registerHandlersWithClassName:@"QHJSUiApi" moduleName:@"ui"];
 }
 
 - (BOOL)registerHandlersWithClassName:(NSString *)className moduleName:(NSString *)moduleName {

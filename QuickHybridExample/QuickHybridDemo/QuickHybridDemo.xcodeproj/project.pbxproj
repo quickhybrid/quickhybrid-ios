@@ -7,24 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7A7F920D6760E4A01F63BE8 /* libPods-QuickHybridDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */; };
+		F1CA90DC2035C70100ECEA1E /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */; };
+		F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */; };
+		F1CA90DE2035C70100ECEA1E /* QHJSNavigatorApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90BD2035C70100ECEA1E /* QHJSNavigatorApi.m */; };
+		F1CA90DF2035C70100ECEA1E /* QHJSPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90BF2035C70100ECEA1E /* QHJSPageApi.m */; };
+		F1CA90E02035C70100ECEA1E /* QHJSRegisterBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90C12035C70100ECEA1E /* QHJSRegisterBaseClass.m */; };
+		F1CA90E12035C70100ECEA1E /* QHJSRuntimeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90C32035C70100ECEA1E /* QHJSRuntimeApi.m */; };
+		F1CA90E22035C70100ECEA1E /* QHJSUIApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90C52035C70100ECEA1E /* QHJSUIApi.m */; };
+		F1CA90E32035C70100ECEA1E /* QHJSModules.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90C62035C70100ECEA1E /* QHJSModules.plist */; };
+		F1CA90E42035C70100ECEA1E /* QHJSBaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90CA2035C70100ECEA1E /* QHJSBaseModalViewController.m */; };
+		F1CA90E52035C70100ECEA1E /* QHJSDatePickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90CC2035C70100ECEA1E /* QHJSDatePickViewController.m */; };
+		F1CA90E62035C70100ECEA1E /* QHJSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90CE2035C70100ECEA1E /* QHJSToast.m */; };
+		F1CA90E72035C70100ECEA1E /* QHJSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D12035C70100ECEA1E /* QHJSBaseViewController.m */; };
+		F1CA90E82035C70100ECEA1E /* QHJSBaseWebLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D32035C70100ECEA1E /* QHJSBaseWebLoader.m */; };
+		F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D62035C70100ECEA1E /* QHJSInfo.m */; };
+		F1CA90EA2035C70100ECEA1E /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */; };
+		F1CA90EB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */; };
+		F1CA90ED2035C77B00ECEA1E /* quickhybridhtml5 in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90EC2035C77B00ECEA1E /* quickhybridhtml5 */; };
+		F1CA90EF2035CA5F00ECEA1E /* qhjs_naviback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */; };
+		F1CA90F22035CC8E00ECEA1E /* QHJSNaviTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */; };
+		F1CA90F42035D09200ECEA1E /* qhjs_downarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */; };
+		F1CA90F72035D6BC00ECEA1E /* QHJSNaviSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90F62035D6BC00ECEA1E /* QHJSNaviSegmentView.m */; };
 		F1EA0BD5203168DA0086BC44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BD4203168DA0086BC44 /* AppDelegate.m */; };
 		F1EA0BDD203168DA0086BC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0BDC203168DA0086BC44 /* Assets.xcassets */; };
 		F1EA0BE0203168DA0086BC44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0BDE203168DA0086BC44 /* LaunchScreen.storyboard */; };
 		F1EA0BE3203168DA0086BC44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BE2203168DA0086BC44 /* main.m */; };
-		F1EA0C08203169700086BC44 /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BEC203169700086BC44 /* QHJSAuthApi.m */; };
-		F1EA0C09203169700086BC44 /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BEE203169700086BC44 /* QHJSDeviceApi.m */; };
-		F1EA0C0A203169700086BC44 /* QHJSPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BF0203169700086BC44 /* QHJSPageApi.m */; };
-		F1EA0C0B203169700086BC44 /* QHJSRegisterBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BF2203169700086BC44 /* QHJSRegisterBaseClass.m */; };
-		F1EA0C0C203169700086BC44 /* QHJSRuntimeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BF4203169700086BC44 /* QHJSRuntimeApi.m */; };
-		F1EA0C0D203169700086BC44 /* QHJSUiApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BF6203169700086BC44 /* QHJSUiApi.m */; };
-		F1EA0C0E203169700086BC44 /* QHJSModules.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0BF7203169700086BC44 /* QHJSModules.plist */; };
-		F1EA0C0F203169700086BC44 /* QHJSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BFA203169700086BC44 /* QHJSToast.m */; };
-		F1EA0C10203169700086BC44 /* QHJSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BFD203169700086BC44 /* QHJSBaseViewController.m */; };
-		F1EA0C11203169700086BC44 /* QHJSBaseWebLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BFF203169700086BC44 /* QHJSBaseWebLoader.m */; };
-		F1EA0C12203169700086BC44 /* QHJSCommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C02203169700086BC44 /* QHJSCommonTool.m */; };
-		F1EA0C13203169700086BC44 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C05203169700086BC44 /* WebViewJavascriptBridgeBase.m */; };
-		F1EA0C14203169700086BC44 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C07203169700086BC44 /* WKWebViewJavascriptBridge.m */; };
-		F1EA0C1620316A440086BC44 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0C1520316A440086BC44 /* res */; };
 		F1EA0C1A20316AA50086BC44 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0C1720316AA50086BC44 /* MainViewController.xib */; };
 		F1EA0C1B20316AA50086BC44 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C1820316AA50086BC44 /* MainViewController.m */; };
 		F1EA0C2120316AD40086BC44 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0C1C20316AD30086BC44 /* HelloViewController.xib */; };
@@ -33,6 +41,47 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickHybridDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		566611FD103C8EE828F9BCC8 /* Pods-QuickHybridDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickHybridDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8FF1BC0799E08ACD8EB1B6F3 /* Pods-QuickHybridDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickHybridDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F1CA90B82035C70100ECEA1E /* QHJSAuthApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
+		F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSAuthApi.m; sourceTree = "<group>"; };
+		F1CA90BA2035C70100ECEA1E /* QHJSDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceApi.h; sourceTree = "<group>"; };
+		F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSDeviceApi.m; sourceTree = "<group>"; };
+		F1CA90BC2035C70100ECEA1E /* QHJSNavigatorApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSNavigatorApi.h; sourceTree = "<group>"; };
+		F1CA90BD2035C70100ECEA1E /* QHJSNavigatorApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSNavigatorApi.m; sourceTree = "<group>"; };
+		F1CA90BE2035C70100ECEA1E /* QHJSPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSPageApi.h; sourceTree = "<group>"; };
+		F1CA90BF2035C70100ECEA1E /* QHJSPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSPageApi.m; sourceTree = "<group>"; };
+		F1CA90C02035C70100ECEA1E /* QHJSRegisterBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRegisterBaseClass.h; sourceTree = "<group>"; };
+		F1CA90C12035C70100ECEA1E /* QHJSRegisterBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRegisterBaseClass.m; sourceTree = "<group>"; };
+		F1CA90C22035C70100ECEA1E /* QHJSRuntimeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRuntimeApi.h; sourceTree = "<group>"; };
+		F1CA90C32035C70100ECEA1E /* QHJSRuntimeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRuntimeApi.m; sourceTree = "<group>"; };
+		F1CA90C42035C70100ECEA1E /* QHJSUIApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSUIApi.h; sourceTree = "<group>"; };
+		F1CA90C52035C70100ECEA1E /* QHJSUIApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSUIApi.m; sourceTree = "<group>"; };
+		F1CA90C62035C70100ECEA1E /* QHJSModules.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QHJSModules.plist; sourceTree = "<group>"; };
+		F1CA90C92035C70100ECEA1E /* QHJSBaseModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSBaseModalViewController.h; sourceTree = "<group>"; };
+		F1CA90CA2035C70100ECEA1E /* QHJSBaseModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSBaseModalViewController.m; sourceTree = "<group>"; };
+		F1CA90CB2035C70100ECEA1E /* QHJSDatePickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDatePickViewController.h; sourceTree = "<group>"; };
+		F1CA90CC2035C70100ECEA1E /* QHJSDatePickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSDatePickViewController.m; sourceTree = "<group>"; };
+		F1CA90CD2035C70100ECEA1E /* QHJSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSToast.h; sourceTree = "<group>"; };
+		F1CA90CE2035C70100ECEA1E /* QHJSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSToast.m; sourceTree = "<group>"; };
+		F1CA90D02035C70100ECEA1E /* QHJSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSBaseViewController.h; sourceTree = "<group>"; };
+		F1CA90D12035C70100ECEA1E /* QHJSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSBaseViewController.m; sourceTree = "<group>"; };
+		F1CA90D22035C70100ECEA1E /* QHJSBaseWebLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSBaseWebLoader.h; sourceTree = "<group>"; };
+		F1CA90D32035C70100ECEA1E /* QHJSBaseWebLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSBaseWebLoader.m; sourceTree = "<group>"; };
+		F1CA90D52035C70100ECEA1E /* QHJSInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSInfo.h; sourceTree = "<group>"; };
+		F1CA90D62035C70100ECEA1E /* QHJSInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSInfo.m; sourceTree = "<group>"; };
+		F1CA90D82035C70100ECEA1E /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		F1CA90DA2035C70100ECEA1E /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		F1CA90EC2035C77B00ECEA1E /* quickhybridhtml5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = quickhybridhtml5; sourceTree = "<group>"; };
+		F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qhjs_naviback@2x.png"; sourceTree = "<group>"; };
+		F1CA90F02035CC8E00ECEA1E /* QHJSNaviTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNaviTitleView.h; sourceTree = "<group>"; };
+		F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNaviTitleView.m; sourceTree = "<group>"; };
+		F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qhjs_downarrow@2x.png"; sourceTree = "<group>"; };
+		F1CA90F52035D6BC00ECEA1E /* QHJSNaviSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNaviSegmentView.h; sourceTree = "<group>"; };
+		F1CA90F62035D6BC00ECEA1E /* QHJSNaviSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNaviSegmentView.m; sourceTree = "<group>"; };
 		F1EA0BD0203168DA0086BC44 /* QuickHybridDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickHybridDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA0BD3203168DA0086BC44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1EA0BD4203168DA0086BC44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,32 +89,6 @@
 		F1EA0BDF203168DA0086BC44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1EA0BE1203168DA0086BC44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1EA0BE2203168DA0086BC44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1EA0BEB203169700086BC44 /* QHJSAuthApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
-		F1EA0BEC203169700086BC44 /* QHJSAuthApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSAuthApi.m; sourceTree = "<group>"; };
-		F1EA0BED203169700086BC44 /* QHJSDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceApi.h; sourceTree = "<group>"; };
-		F1EA0BEE203169700086BC44 /* QHJSDeviceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSDeviceApi.m; sourceTree = "<group>"; };
-		F1EA0BEF203169700086BC44 /* QHJSPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSPageApi.h; sourceTree = "<group>"; };
-		F1EA0BF0203169700086BC44 /* QHJSPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSPageApi.m; sourceTree = "<group>"; };
-		F1EA0BF1203169700086BC44 /* QHJSRegisterBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRegisterBaseClass.h; sourceTree = "<group>"; };
-		F1EA0BF2203169700086BC44 /* QHJSRegisterBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRegisterBaseClass.m; sourceTree = "<group>"; };
-		F1EA0BF3203169700086BC44 /* QHJSRuntimeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSRuntimeApi.h; sourceTree = "<group>"; };
-		F1EA0BF4203169700086BC44 /* QHJSRuntimeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSRuntimeApi.m; sourceTree = "<group>"; };
-		F1EA0BF5203169700086BC44 /* QHJSUiApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSUiApi.h; sourceTree = "<group>"; };
-		F1EA0BF6203169700086BC44 /* QHJSUiApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSUiApi.m; sourceTree = "<group>"; };
-		F1EA0BF7203169700086BC44 /* QHJSModules.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QHJSModules.plist; sourceTree = "<group>"; };
-		F1EA0BF9203169700086BC44 /* QHJSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSToast.h; sourceTree = "<group>"; };
-		F1EA0BFA203169700086BC44 /* QHJSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSToast.m; sourceTree = "<group>"; };
-		F1EA0BFC203169700086BC44 /* QHJSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSBaseViewController.h; sourceTree = "<group>"; };
-		F1EA0BFD203169700086BC44 /* QHJSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSBaseViewController.m; sourceTree = "<group>"; };
-		F1EA0BFE203169700086BC44 /* QHJSBaseWebLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSBaseWebLoader.h; sourceTree = "<group>"; };
-		F1EA0BFF203169700086BC44 /* QHJSBaseWebLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSBaseWebLoader.m; sourceTree = "<group>"; };
-		F1EA0C01203169700086BC44 /* QHJSCommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSCommonTool.h; sourceTree = "<group>"; };
-		F1EA0C02203169700086BC44 /* QHJSCommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSCommonTool.m; sourceTree = "<group>"; };
-		F1EA0C04203169700086BC44 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		F1EA0C05203169700086BC44 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		F1EA0C06203169700086BC44 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		F1EA0C07203169700086BC44 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		F1EA0C1520316A440086BC44 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		F1EA0C1720316AA50086BC44 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F1EA0C1820316AA50086BC44 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F1EA0C1920316AA50086BC44 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -81,17 +104,129 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A7F920D6760E4A01F63BE8 /* libPods-QuickHybridDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AD4D381CC43B72CDC2924E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89CA787E6E011E08736DBBA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FF1BC0799E08ACD8EB1B6F3 /* Pods-QuickHybridDemo.debug.xcconfig */,
+				566611FD103C8EE828F9BCC8 /* Pods-QuickHybridDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1CA90B62035C70100ECEA1E /* QuickHybird */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90C62035C70100ECEA1E /* QHJSModules.plist */,
+				F1CA90C72035C70100ECEA1E /* QHJSRes */,
+				F1CA90D42035C70100ECEA1E /* QuickHybridUtils */,
+				F1CA90CF2035C70100ECEA1E /* QuickHybridCore */,
+				F1CA90C82035C70100ECEA1E /* QuickHybridComponents */,
+				F1CA90B72035C70100ECEA1E /* QHJSFrameAPI */,
+				F1CA90D72035C70100ECEA1E /* WebViewJavascriptBridge */,
+			);
+			path = QuickHybird;
+			sourceTree = "<group>";
+		};
+		F1CA90B72035C70100ECEA1E /* QHJSFrameAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90C02035C70100ECEA1E /* QHJSRegisterBaseClass.h */,
+				F1CA90C12035C70100ECEA1E /* QHJSRegisterBaseClass.m */,
+				F1CA90BE2035C70100ECEA1E /* QHJSPageApi.h */,
+				F1CA90BF2035C70100ECEA1E /* QHJSPageApi.m */,
+				F1CA90C42035C70100ECEA1E /* QHJSUIApi.h */,
+				F1CA90C52035C70100ECEA1E /* QHJSUIApi.m */,
+				F1CA90BC2035C70100ECEA1E /* QHJSNavigatorApi.h */,
+				F1CA90BD2035C70100ECEA1E /* QHJSNavigatorApi.m */,
+				F1CA90B82035C70100ECEA1E /* QHJSAuthApi.h */,
+				F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */,
+				F1CA90BA2035C70100ECEA1E /* QHJSDeviceApi.h */,
+				F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */,
+				F1CA90C22035C70100ECEA1E /* QHJSRuntimeApi.h */,
+				F1CA90C32035C70100ECEA1E /* QHJSRuntimeApi.m */,
+			);
+			path = QHJSFrameAPI;
+			sourceTree = "<group>";
+		};
+		F1CA90C72035C70100ECEA1E /* QHJSRes */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */,
+				F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */,
+			);
+			path = QHJSRes;
+			sourceTree = "<group>";
+		};
+		F1CA90C82035C70100ECEA1E /* QuickHybridComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90CD2035C70100ECEA1E /* QHJSToast.h */,
+				F1CA90CE2035C70100ECEA1E /* QHJSToast.m */,
+				F1CA90C92035C70100ECEA1E /* QHJSBaseModalViewController.h */,
+				F1CA90CA2035C70100ECEA1E /* QHJSBaseModalViewController.m */,
+				F1CA90CB2035C70100ECEA1E /* QHJSDatePickViewController.h */,
+				F1CA90CC2035C70100ECEA1E /* QHJSDatePickViewController.m */,
+				F1CA90F02035CC8E00ECEA1E /* QHJSNaviTitleView.h */,
+				F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */,
+				F1CA90F52035D6BC00ECEA1E /* QHJSNaviSegmentView.h */,
+				F1CA90F62035D6BC00ECEA1E /* QHJSNaviSegmentView.m */,
+			);
+			path = QuickHybridComponents;
+			sourceTree = "<group>";
+		};
+		F1CA90CF2035C70100ECEA1E /* QuickHybridCore */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90D02035C70100ECEA1E /* QHJSBaseViewController.h */,
+				F1CA90D12035C70100ECEA1E /* QHJSBaseViewController.m */,
+				F1CA90D22035C70100ECEA1E /* QHJSBaseWebLoader.h */,
+				F1CA90D32035C70100ECEA1E /* QHJSBaseWebLoader.m */,
+			);
+			path = QuickHybridCore;
+			sourceTree = "<group>";
+		};
+		F1CA90D42035C70100ECEA1E /* QuickHybridUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90D52035C70100ECEA1E /* QHJSInfo.h */,
+				F1CA90D62035C70100ECEA1E /* QHJSInfo.m */,
+			);
+			path = QuickHybridUtils;
+			sourceTree = "<group>";
+		};
+		F1CA90D72035C70100ECEA1E /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA90D82035C70100ECEA1E /* WebViewJavascriptBridgeBase.h */,
+				F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */,
+				F1CA90DA2035C70100ECEA1E /* WKWebViewJavascriptBridge.h */,
+				F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 		F1EA0BC7203168DA0086BC44 = {
 			isa = PBXGroup;
 			children = (
 				F1EA0BD2203168DA0086BC44 /* QuickHybridDemo */,
 				F1EA0BD1203168DA0086BC44 /* Products */,
+				89CA787E6E011E08736DBBA3 /* Pods */,
+				2AD4D381CC43B72CDC2924E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,8 +241,8 @@
 		F1EA0BD2203168DA0086BC44 /* QuickHybridDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F1EA0C1520316A440086BC44 /* res */,
-				F1EA0BE9203169700086BC44 /* QuickHybird */,
+				F1CA90EC2035C77B00ECEA1E /* quickhybridhtml5 */,
+				F1CA90B62035C70100ECEA1E /* QuickHybird */,
 				F1EA0BD3203168DA0086BC44 /* AppDelegate.h */,
 				F1EA0BD4203168DA0086BC44 /* AppDelegate.m */,
 				F1EA0C1920316AA50086BC44 /* MainViewController.h */,
@@ -126,78 +261,6 @@
 			path = QuickHybridDemo;
 			sourceTree = "<group>";
 		};
-		F1EA0BE9203169700086BC44 /* QuickHybird */ = {
-			isa = PBXGroup;
-			children = (
-				F1EA0BF7203169700086BC44 /* QHJSModules.plist */,
-				F1EA0BF8203169700086BC44 /* QuickHybridComponents */,
-				F1EA0C00203169700086BC44 /* QuickHybridUtils */,
-				F1EA0BFB203169700086BC44 /* QuickHybridCore */,
-				F1EA0BEA203169700086BC44 /* FrameAPI */,
-				F1EA0C03203169700086BC44 /* WebViewJavascriptBridge */,
-			);
-			path = QuickHybird;
-			sourceTree = "<group>";
-		};
-		F1EA0BEA203169700086BC44 /* FrameAPI */ = {
-			isa = PBXGroup;
-			children = (
-				F1EA0BEB203169700086BC44 /* QHJSAuthApi.h */,
-				F1EA0BEC203169700086BC44 /* QHJSAuthApi.m */,
-				F1EA0BED203169700086BC44 /* QHJSDeviceApi.h */,
-				F1EA0BEE203169700086BC44 /* QHJSDeviceApi.m */,
-				F1EA0BEF203169700086BC44 /* QHJSPageApi.h */,
-				F1EA0BF0203169700086BC44 /* QHJSPageApi.m */,
-				F1EA0BF1203169700086BC44 /* QHJSRegisterBaseClass.h */,
-				F1EA0BF2203169700086BC44 /* QHJSRegisterBaseClass.m */,
-				F1EA0BF3203169700086BC44 /* QHJSRuntimeApi.h */,
-				F1EA0BF4203169700086BC44 /* QHJSRuntimeApi.m */,
-				F1EA0BF5203169700086BC44 /* QHJSUiApi.h */,
-				F1EA0BF6203169700086BC44 /* QHJSUiApi.m */,
-			);
-			path = FrameAPI;
-			sourceTree = "<group>";
-		};
-		F1EA0BF8203169700086BC44 /* QuickHybridComponents */ = {
-			isa = PBXGroup;
-			children = (
-				F1EA0BF9203169700086BC44 /* QHJSToast.h */,
-				F1EA0BFA203169700086BC44 /* QHJSToast.m */,
-			);
-			path = QuickHybridComponents;
-			sourceTree = "<group>";
-		};
-		F1EA0BFB203169700086BC44 /* QuickHybridCore */ = {
-			isa = PBXGroup;
-			children = (
-				F1EA0BFC203169700086BC44 /* QHJSBaseViewController.h */,
-				F1EA0BFD203169700086BC44 /* QHJSBaseViewController.m */,
-				F1EA0BFE203169700086BC44 /* QHJSBaseWebLoader.h */,
-				F1EA0BFF203169700086BC44 /* QHJSBaseWebLoader.m */,
-			);
-			path = QuickHybridCore;
-			sourceTree = "<group>";
-		};
-		F1EA0C00203169700086BC44 /* QuickHybridUtils */ = {
-			isa = PBXGroup;
-			children = (
-				F1EA0C01203169700086BC44 /* QHJSCommonTool.h */,
-				F1EA0C02203169700086BC44 /* QHJSCommonTool.m */,
-			);
-			path = QuickHybridUtils;
-			sourceTree = "<group>";
-		};
-		F1EA0C03203169700086BC44 /* WebViewJavascriptBridge */ = {
-			isa = PBXGroup;
-			children = (
-				F1EA0C04203169700086BC44 /* WebViewJavascriptBridgeBase.h */,
-				F1EA0C05203169700086BC44 /* WebViewJavascriptBridgeBase.m */,
-				F1EA0C06203169700086BC44 /* WKWebViewJavascriptBridge.h */,
-				F1EA0C07203169700086BC44 /* WKWebViewJavascriptBridge.m */,
-			);
-			path = WebViewJavascriptBridge;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,9 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1EA0BE6203168DA0086BC44 /* Build configuration list for PBXNativeTarget "QuickHybridDemo" */;
 			buildPhases = (
+				1076E5E3DBD46E6A8DA8B31C /* [CP] Check Pods Manifest.lock */,
 				F1EA0BCC203168DA0086BC44 /* Sources */,
 				F1EA0BCD203168DA0086BC44 /* Frameworks */,
 				F1EA0BCE203168DA0086BC44 /* Resources */,
+				7780662122B2FCE293739366 /* [CP] Embed Pods Frameworks */,
+				84BFF629207FDFE44654A4DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +290,7 @@
 		F1EA0BC8203168DA0086BC44 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = QHJS;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = com.quickhybrid;
 				TargetAttributes = {
@@ -258,37 +325,98 @@
 			files = (
 				F1EA0BE0203168DA0086BC44 /* LaunchScreen.storyboard in Resources */,
 				F1EA0BDD203168DA0086BC44 /* Assets.xcassets in Resources */,
+				F1CA90F42035D09200ECEA1E /* qhjs_downarrow@2x.png in Resources */,
 				F1EA0C1A20316AA50086BC44 /* MainViewController.xib in Resources */,
 				F1EA0C2120316AD40086BC44 /* HelloViewController.xib in Resources */,
-				F1EA0C0E203169700086BC44 /* QHJSModules.plist in Resources */,
-				F1EA0C1620316A440086BC44 /* res in Resources */,
+				F1CA90EF2035CA5F00ECEA1E /* qhjs_naviback@2x.png in Resources */,
+				F1CA90E32035C70100ECEA1E /* QHJSModules.plist in Resources */,
+				F1CA90ED2035C77B00ECEA1E /* quickhybridhtml5 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1076E5E3DBD46E6A8DA8B31C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickHybridDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7780662122B2FCE293739366 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84BFF629207FDFE44654A4DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo-resources.sh",
+				"${PODS_ROOT}/WSProgressHUD/WSProgressHUD/WSProgressBundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WSProgressBundle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1EA0BCC203168DA0086BC44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1EA0C11203169700086BC44 /* QHJSBaseWebLoader.m in Sources */,
-				F1EA0C0D203169700086BC44 /* QHJSUiApi.m in Sources */,
-				F1EA0C0F203169700086BC44 /* QHJSToast.m in Sources */,
+				F1CA90F72035D6BC00ECEA1E /* QHJSNaviSegmentView.m in Sources */,
+				F1CA90E22035C70100ECEA1E /* QHJSUIApi.m in Sources */,
+				F1CA90EB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m in Sources */,
+				F1CA90DE2035C70100ECEA1E /* QHJSNavigatorApi.m in Sources */,
+				F1CA90DC2035C70100ECEA1E /* QHJSAuthApi.m in Sources */,
+				F1CA90E72035C70100ECEA1E /* QHJSBaseViewController.m in Sources */,
 				F1EA0C2220316AD40086BC44 /* HelloViewController.m in Sources */,
-				F1EA0C13203169700086BC44 /* WebViewJavascriptBridgeBase.m in Sources */,
-				F1EA0C0A203169700086BC44 /* QHJSPageApi.m in Sources */,
 				F1EA0BE3203168DA0086BC44 /* main.m in Sources */,
-				F1EA0C08203169700086BC44 /* QHJSAuthApi.m in Sources */,
-				F1EA0C12203169700086BC44 /* QHJSCommonTool.m in Sources */,
-				F1EA0C0B203169700086BC44 /* QHJSRegisterBaseClass.m in Sources */,
 				F1EA0BD5203168DA0086BC44 /* AppDelegate.m in Sources */,
+				F1CA90E62035C70100ECEA1E /* QHJSToast.m in Sources */,
+				F1CA90E12035C70100ECEA1E /* QHJSRuntimeApi.m in Sources */,
+				F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */,
+				F1CA90E02035C70100ECEA1E /* QHJSRegisterBaseClass.m in Sources */,
+				F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */,
 				F1EA0C2320316AD40086BC44 /* TestPayApi.m in Sources */,
-				F1EA0C14203169700086BC44 /* WKWebViewJavascriptBridge.m in Sources */,
-				F1EA0C09203169700086BC44 /* QHJSDeviceApi.m in Sources */,
-				F1EA0C10203169700086BC44 /* QHJSBaseViewController.m in Sources */,
+				F1CA90F22035CC8E00ECEA1E /* QHJSNaviTitleView.m in Sources */,
+				F1CA90E42035C70100ECEA1E /* QHJSBaseModalViewController.m in Sources */,
+				F1CA90DF2035C70100ECEA1E /* QHJSPageApi.m in Sources */,
 				F1EA0C1B20316AA50086BC44 /* MainViewController.m in Sources */,
-				F1EA0C0C203169700086BC44 /* QHJSRuntimeApi.m in Sources */,
+				F1CA90E52035C70100ECEA1E /* QHJSDatePickViewController.m in Sources */,
+				F1CA90EA2035C70100ECEA1E /* WebViewJavascriptBridgeBase.m in Sources */,
+				F1CA90E82035C70100ECEA1E /* QHJSBaseWebLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +540,7 @@
 		};
 		F1EA0BE7203168DA0086BC44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF1BC0799E08ACD8EB1B6F3 /* Pods-QuickHybridDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +555,7 @@
 		};
 		F1EA0BE8203168DA0086BC44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 566611FD103C8EE828F9BCC8 /* Pods-QuickHybridDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
