@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C7A7F920D6760E4A01F63BE8 /* libPods-QuickHybridDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */; };
+		F105E795221E359D0098F520 /* QHJSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F105E794221E359D0098F520 /* QHJSNavigationViewController.m */; };
+		F1AB1787205763A300E66E46 /* quickhybrid in Resources */ = {isa = PBXBuildFile; fileRef = F1AB1786205763A300E66E46 /* quickhybrid */; };
 		F1CA90DC2035C70100ECEA1E /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */; };
 		F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */; };
 		F1CA90DE2035C70100ECEA1E /* QHJSNavigatorApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90BD2035C70100ECEA1E /* QHJSNavigatorApi.m */; };
@@ -24,7 +26,6 @@
 		F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D62035C70100ECEA1E /* QHJSInfo.m */; };
 		F1CA90EA2035C70100ECEA1E /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */; };
 		F1CA90EB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */; };
-		F1CA90ED2035C77B00ECEA1E /* quickhybridhtml5 in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90EC2035C77B00ECEA1E /* quickhybridhtml5 */; };
 		F1CA90EF2035CA5F00ECEA1E /* qhjs_naviback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */; };
 		F1CA90F22035CC8E00ECEA1E /* QHJSNaviTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */; };
 		F1CA90F42035D09200ECEA1E /* qhjs_downarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */; };
@@ -44,6 +45,10 @@
 		2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickHybridDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		566611FD103C8EE828F9BCC8 /* Pods-QuickHybridDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickHybridDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8FF1BC0799E08ACD8EB1B6F3 /* Pods-QuickHybridDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickHybridDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F105E793221E359D0098F520 /* QHJSNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNavigationViewController.h; sourceTree = "<group>"; };
+		F105E794221E359D0098F520 /* QHJSNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNavigationViewController.m; sourceTree = "<group>"; };
+		F1AB1786205763A300E66E46 /* quickhybrid */ = {isa = PBXFileReference; lastKnownFileType = folder; path = quickhybrid; sourceTree = "<group>"; };
+		F1B43140221D551C00C30945 /* QuickHybridDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickHybridDemo.pch; sourceTree = "<group>"; };
 		F1CA90B82035C70100ECEA1E /* QHJSAuthApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
 		F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHJSAuthApi.m; sourceTree = "<group>"; };
 		F1CA90BA2035C70100ECEA1E /* QHJSDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceApi.h; sourceTree = "<group>"; };
@@ -75,7 +80,6 @@
 		F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		F1CA90DA2035C70100ECEA1E /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		F1CA90EC2035C77B00ECEA1E /* quickhybridhtml5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = quickhybridhtml5; sourceTree = "<group>"; };
 		F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qhjs_naviback@2x.png"; sourceTree = "<group>"; };
 		F1CA90F02035CC8E00ECEA1E /* QHJSNaviTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNaviTitleView.h; sourceTree = "<group>"; };
 		F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNaviTitleView.m; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		F1CA90CF2035C70100ECEA1E /* QuickHybridCore */ = {
 			isa = PBXGroup;
 			children = (
+				F105E793221E359D0098F520 /* QHJSNavigationViewController.h */,
+				F105E794221E359D0098F520 /* QHJSNavigationViewController.m */,
 				F1CA90D02035C70100ECEA1E /* QHJSBaseViewController.h */,
 				F1CA90D12035C70100ECEA1E /* QHJSBaseViewController.m */,
 				F1CA90D22035C70100ECEA1E /* QHJSBaseWebLoader.h */,
@@ -241,10 +247,8 @@
 		F1EA0BD2203168DA0086BC44 /* QuickHybridDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F1CA90EC2035C77B00ECEA1E /* quickhybridhtml5 */,
+				F1AB1786205763A300E66E46 /* quickhybrid */,
 				F1CA90B62035C70100ECEA1E /* QuickHybird */,
-				F1EA0BD3203168DA0086BC44 /* AppDelegate.h */,
-				F1EA0BD4203168DA0086BC44 /* AppDelegate.m */,
 				F1EA0C1920316AA50086BC44 /* MainViewController.h */,
 				F1EA0C1820316AA50086BC44 /* MainViewController.m */,
 				F1EA0C1720316AA50086BC44 /* MainViewController.xib */,
@@ -253,8 +257,11 @@
 				F1EA0C1F20316AD40086BC44 /* HelloViewController.h */,
 				F1EA0C1D20316AD30086BC44 /* HelloViewController.m */,
 				F1EA0C1C20316AD30086BC44 /* HelloViewController.xib */,
+				F1EA0BD3203168DA0086BC44 /* AppDelegate.h */,
+				F1EA0BD4203168DA0086BC44 /* AppDelegate.m */,
 				F1EA0BDC203168DA0086BC44 /* Assets.xcassets */,
 				F1EA0BDE203168DA0086BC44 /* LaunchScreen.storyboard */,
+				F1B43140221D551C00C30945 /* QuickHybridDemo.pch */,
 				F1EA0BE1203168DA0086BC44 /* Info.plist */,
 				F1EA0BE2203168DA0086BC44 /* main.m */,
 			);
@@ -325,12 +332,12 @@
 			files = (
 				F1EA0BE0203168DA0086BC44 /* LaunchScreen.storyboard in Resources */,
 				F1EA0BDD203168DA0086BC44 /* Assets.xcassets in Resources */,
+				F1AB1787205763A300E66E46 /* quickhybrid in Resources */,
 				F1CA90F42035D09200ECEA1E /* qhjs_downarrow@2x.png in Resources */,
 				F1EA0C1A20316AA50086BC44 /* MainViewController.xib in Resources */,
 				F1EA0C2120316AD40086BC44 /* HelloViewController.xib in Resources */,
 				F1CA90EF2035CA5F00ECEA1E /* qhjs_naviback@2x.png in Resources */,
 				F1CA90E32035C70100ECEA1E /* QHJSModules.plist in Resources */,
-				F1CA90ED2035C77B00ECEA1E /* quickhybridhtml5 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +415,7 @@
 				F1CA90E12035C70100ECEA1E /* QHJSRuntimeApi.m in Sources */,
 				F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */,
 				F1CA90E02035C70100ECEA1E /* QHJSRegisterBaseClass.m in Sources */,
+				F105E795221E359D0098F520 /* QHJSNavigationViewController.m in Sources */,
 				F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */,
 				F1EA0C2320316AD40086BC44 /* TestPayApi.m in Sources */,
 				F1CA90F22035CC8E00ECEA1E /* QHJSNaviTitleView.m in Sources */,
@@ -543,12 +551,17 @@
 			baseConfigurationReference = 8FF1BC0799E08ACD8EB1B6F3 /* Pods-QuickHybridDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuickHybridDemo/QuickHybridDemo.pch;
 				INFOPLIST_FILE = QuickHybridDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.QuickHybridDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guanhao.quickhybrid.QuickHybridDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -558,12 +571,17 @@
 			baseConfigurationReference = 566611FD103C8EE828F9BCC8 /* Pods-QuickHybridDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuickHybridDemo/QuickHybridDemo.pch;
 				INFOPLIST_FILE = QuickHybridDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quickhybrid.QuickHybridDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guanhao.quickhybrid.QuickHybridDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -6,13 +6,18 @@
 //  Copyright © 2017年 quickhybrid. All rights reserved.
 //
 
-#import "QHJSDeviceAPI.h"
+#import "QHJSDeviceApi.h"
 
 @implementation QHJSDeviceApi
 
 - (void)registerHandlers {
    
 }
+
+- (void)dealloc {
+    NSLog(@"<QHJSDeviceApi>dealloc");
+}
+
 @end
 
 

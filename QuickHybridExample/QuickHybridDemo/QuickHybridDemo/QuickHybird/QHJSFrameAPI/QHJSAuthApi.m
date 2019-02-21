@@ -12,6 +12,9 @@
 @implementation QHJSAuthApi
 
 - (void)registerHandlers {
+    
+    __weak typeof(self) weakSelf = self;
+    
     [self registerHandlerName:@"getToken" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSString *token = @"testtoken";
         if (token.length == 0) { token = @""; }
@@ -32,7 +35,7 @@
                 // 读取配置文件中的路径
                 if ([dic.allKeys containsObject:name]) {
                     NSString *className = dic[name];
-                    BOOL success = [self.webloader registerHandlersWithClassName:className moduleName:name];
+                    BOOL success = [weakSelf.webloader registerHandlersWithClassName:className moduleName:name];
                     if (success == NO) {
                         configSuccess = 0;
                         msg = [NSString stringWithFormat:@"%@\n %@ API注册失败", msg, name];
@@ -46,10 +49,15 @@
             msg = @"jsApiList 参数错误";
         }
         
-        NSDictionary *dic = [self responseDicWithCode:configSuccess Msg:msg result:nil];
+        NSDictionary *dic = [weakSelf responseDicWithCode:configSuccess Msg:msg result:nil];
         responseCallback(dic);
     }];
 }
+
+- (void)dealloc {
+    NSLog(@"<QHJSAuthApi>dealloc");
+}
+
 @end
 
 

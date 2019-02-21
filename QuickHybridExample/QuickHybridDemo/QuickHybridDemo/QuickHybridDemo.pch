@@ -1,0 +1,24 @@
+//
+//  QuickHybridDemo.pch
+//  QuickHybridDemo
+//
+//  Created by 管浩 on 2019/2/20.
+//  Copyright © 2019年 com.quickhybrid. All rights reserved.
+//
+
+#ifndef QuickHybridDemo_pch
+#define QuickHybridDemo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#define QGJS_DEBUG
+#ifdef QGJS_DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+#endif
+
+#endif /* QuickHybridDemo_pch */

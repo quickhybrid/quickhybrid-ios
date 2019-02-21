@@ -35,6 +35,8 @@ static int logMaxLength = 500;
     self.startupMessageQueue = nil;
     self.responseCallbacks = nil;
     self.messageHandlers = nil;
+    
+    NSLog(@"<WebViewJavascriptBridgeBase>dealloc");
 }
 
 - (void)reset {

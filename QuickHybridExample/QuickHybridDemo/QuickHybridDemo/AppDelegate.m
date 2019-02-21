@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "QHJSNavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,8 @@
     // Override point for customization after application launch.
     
     MainViewController *vc = [[MainViewController alloc] init];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
-    navi.navigationBar.translucent = NO;
+    QHJSNavigationViewController *navi = [[QHJSNavigationViewController alloc] initWithRootViewController:vc];
+//    navi.navigationBar.translucent = NO;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

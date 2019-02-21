@@ -24,7 +24,7 @@
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithCapacity:1];
     QHJSBaseWebLoader *vc = [[QHJSBaseWebLoader alloc] init];
 //    [paramDic setObject:@"http://192.168.0.100:8020/quickhybrid/examples/index.html?__hbt=1514625044921" forKey:@"pageUrl"];
-    NSURL *pathUrl = [[NSBundle mainBundle] URLForResource:@"quickhybridhtml5/examples/index" withExtension:@"html"];
+    NSURL *pathUrl = [[NSBundle mainBundle] URLForResource:@"quickhybrid/examples/index" withExtension:@"html"];
     [paramDic setObject:[pathUrl absoluteString] forKey:@"pageUrl"];
     vc.params = paramDic;
     [self.navigationController pushViewController:vc animated:YES];

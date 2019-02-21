@@ -78,6 +78,8 @@
     _webView = nil;
     _webViewDelegate = nil;
     _webView.navigationDelegate = nil;
+    
+    NSLog(@"<WKWebViewJavascriptBridge>dealloc");
 }
 
 
@@ -158,6 +160,7 @@
     if (![msgURL.scheme isEqualToString:@"QuickHybridJSBridge"]) {
         return;
     }
+    // 解析参数
     NSString *moduleName = msgURL.host;
     NSString *handlerName = msgURL.path.lastPathComponent;
     NSString *callbackId = msgURL.port.stringValue;

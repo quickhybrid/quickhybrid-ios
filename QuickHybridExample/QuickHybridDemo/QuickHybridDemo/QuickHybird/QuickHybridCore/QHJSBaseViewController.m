@@ -24,7 +24,7 @@
     self = [super init];
     if (self) {
         _statusBarStyle = UIStatusBarStyleDefault;
-        _statusBarShouldHide = NO;
+        _statusBarShouldHide = YES;
     }
     return self;
 }
@@ -83,8 +83,6 @@
     self.statusBarStyle = style;
     [self setNeedsStatusBarAppearanceUpdate];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

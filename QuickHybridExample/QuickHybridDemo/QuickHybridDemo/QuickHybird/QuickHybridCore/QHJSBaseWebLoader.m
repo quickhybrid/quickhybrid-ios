@@ -49,6 +49,7 @@ static NSString *KVOContext;
     // 初始化
     self.view.backgroundColor = [UIColor whiteColor];
     
+    // 创建WKWebView
     [self createWKWebView];
     
     // 注册KVO
@@ -83,8 +84,8 @@ static NSString *KVOContext;
     progressView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:@[
                                 [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0],
-                                [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view    attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0],
-                                [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view    attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]
+                                [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0],
+                                [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]
                                 ]];
     NSLayoutConstraint *progressH = [NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0 constant:1.5];
     self.progressH = progressH;
@@ -175,7 +176,6 @@ static NSString *KVOContext;
 
 //这个代理方法不实现也能正常跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    NSLog(@"decidePolicyForNavigationAction");
     if ([navigationAction.request.URL.absoluteString isEqualToString:@"about:blank"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
     } else {
@@ -324,10 +324,20 @@ static NSString *KVOContext;
 }
 
 - (void)dealloc {
-    NSLog(@"<QHJSBaseWebLoader>dealloc");
+    [self.wv.configuration.userContentController removeScriptMessageHandlerForName:@"WKWebViewJavascriptBridge"];
+    [self.wv.configuration.userContentController removeAllUserScripts];
+    
+    
+//    self.wv.configuration.userContentController.removeScriptMessageHandler(forName: iOS_Native_InjectJavascript)
+//    self.wv.configuration.userContentController.removeScriptMessageHandler(forName: iOS_Native_FlushMessageQueue)
+//    self.wv.configuration.userContentController.removeScriptMessageHandler(forName: iOS_WKWebViewJavascriptBridge)
+//    self.wv.configuration.userContentController.removeAllUserScripts()
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self.wv removeObserver:self forKeyPath:@"title" context:&KVOContext];
     [self.wv removeObserver:self forKeyPath:@"estimatedProgress" context:&KVOContext];
+    
+    NSLog(@"<QHJSBaseWebLoader>dealloc");
 }
 
 @end

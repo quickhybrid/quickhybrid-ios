@@ -11,10 +11,17 @@
 @implementation TestPayApi
 
 - (void)registerHandlers {
+    __weak typeof(self) weakSelf = self;
+    
     [self registerHandlerName:@"testPay" handler:^(id data, WVJBResponseCallback responseCallback) {
         
-        NSDictionary *dic = [self responseDicWithCode:1 Msg:@"success" result:@"testPay"];
+        NSDictionary *dic = [weakSelf responseDicWithCode:1 Msg:@"success" result:@"testPay"];
         responseCallback(dic);
     }];
 }
+
+- (void)dealloc {
+    NSLog(@"<TestPayApi>dealloc");
+}
+
 @end

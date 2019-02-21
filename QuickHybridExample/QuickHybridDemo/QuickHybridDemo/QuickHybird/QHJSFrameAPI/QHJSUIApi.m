@@ -25,7 +25,7 @@
         QHJSToast *toast = [QHJSToast toastMessage:message duration:2];
         [toast show];
         
-        NSDictionary *resDic = [self responseDicWithCode:1 Msg:@"" result:nil];
+        NSDictionary *resDic = [weakSelf responseDicWithCode:1 Msg:@"" result:nil];
         responseCallback(resDic);
     }];
     
@@ -80,13 +80,13 @@
         } else {
             [weakSelf.webloader showProgressWithMessage:nil];
         }
-        NSDictionary *dic = [self responseDicWithCode:1 Msg:@"" result:nil];
+        NSDictionary *dic = [weakSelf responseDicWithCode:1 Msg:@"" result:nil];
         responseCallback(dic);
     }];
     
     [self registerHandlerName:@"closeWaiting" handler:^(id data, WVJBResponseCallback responseCallback) {
         [weakSelf.webloader hideProgress];
-        NSDictionary *dic = [self responseDicWithCode:1 Msg:@"" result:nil];
+        NSDictionary *dic = [weakSelf responseDicWithCode:1 Msg:@"" result:nil];
         responseCallback(dic);
     }];
     
@@ -121,7 +121,7 @@
             NSDictionary *responseDic = [weakSelf responseDicWithCode:1 Msg:@"" result:result];
             responseCallback(responseDic);
         };
-        [datePickerController showByModalInController:self.webloader];
+        [datePickerController showByModalInController:weakSelf.webloader];
     }];
     
     [self registerHandlerName:@"pickTime" handler:^(id data, WVJBResponseCallback responseCallback) {
@@ -134,7 +134,7 @@
             NSDictionary *responseDic = [weakSelf responseDicWithCode:1 Msg:@"" result:result];
             responseCallback(responseDic);
         };
-        [datePickerController showByModalInController:self.webloader];
+        [datePickerController showByModalInController:weakSelf.webloader];
     }];
     
     [self registerHandlerName:@"pickDateTime" handler:^(id data, WVJBResponseCallback responseCallback) {
@@ -147,9 +147,14 @@
             NSDictionary *responseDic = [weakSelf responseDicWithCode:1 Msg:@"" result:result];
             responseCallback(responseDic);
         };
-        [datePickerController showByModalInController:self.webloader];
+        [datePickerController showByModalInController:weakSelf.webloader];
     }];
 }
+
+- (void)dealloc {
+    NSLog(@"<QHJSUIApi>dealloc");
+}
+
 @end
 
 
