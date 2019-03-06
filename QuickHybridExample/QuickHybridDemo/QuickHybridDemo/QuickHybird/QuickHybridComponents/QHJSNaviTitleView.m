@@ -7,6 +7,7 @@
 //
 
 #import "QHJSNaviTitleView.h"
+#import "UIImage+QHJSIamge.h"
 
 @interface QHJSNaviTitleView ()
 @property (nonatomic, copy) NSString *mainTitle;
@@ -73,7 +74,7 @@
     //箭头图标
     if (self.clickable == 1) {
         self.arrorImageView = [[UIImageView alloc] init];
-        self.arrorImageView.image = [UIImage imageNamed:@"qhjs_downarrow"];
+        self.arrorImageView.image = [UIImage imageNamed:@"qhjs_downarrow.png" inBundleName:@"QuickHybridBundle"];
         self.arrorImageView.bounds = CGRectMake(0, 0, 15, 15);
         [self addSubview:self.arrorImageView];
     }

@@ -15,14 +15,18 @@
     
     __weak typeof(self) weakSelf = self;
     
+    //获取token方法
     [self registerHandlerName:@"getToken" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSString *token = @"testtoken";
-        if (token.length == 0) { token = @""; }
-        NSDictionary *resultDic = @{@"access_token":token};
-        NSDictionary *responData = @{@"result":resultDic, @"code":@1, @"msg":@"token"};
+        if (token.length == 0) {
+            token = @"";
+        }
+        NSDictionary *resultDic = @{@"access_token" : token};
+        NSDictionary *responData = @{@"result" : resultDic, @"code" : @1, @"msg" : @"token"};
         responseCallback(responData);
     }];
     
+    //设置自定义API的方法
     [self registerHandlerName:@"config" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSInteger configSuccess = 1;
         NSString *msg = @"";
@@ -32,9 +36,10 @@
             NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"QHJSModules" ofType:@"plist"];
             NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:plistPath];
             for (NSString *name in listArray) {
-                // 读取配置文件中的路径
+                //读取配置文件中的路径
                 if ([dic.allKeys containsObject:name]) {
                     NSString *className = dic[name];
+                    //通过容器暴露的方法注册API
                     BOOL success = [weakSelf.webloader registerHandlersWithClassName:className moduleName:name];
                     if (success == NO) {
                         configSuccess = 0;

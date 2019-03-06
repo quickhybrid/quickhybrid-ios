@@ -16,15 +16,20 @@
 @property (nonatomic, assign) BOOL statusBarShouldHide;
 /** 状态栏样式 */
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+
 @end
 
 @implementation QHJSBaseViewController
+
+#pragma mark --- setter/getter方法
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         _statusBarStyle = UIStatusBarStyleDefault;
-        _statusBarShouldHide = YES;
+        _statusBarShouldHide = NO;
+        _interactivePopGestureRecognizerEnabled = YES;
+        _shouldPop = YES;
     }
     return self;
 }
@@ -36,23 +41,33 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    //修改返回按钮
+    
+    //设置导航栏返回按钮，采用leftBarButtonItem设置，隐藏backBarButtonItem
     self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"qhjs_naviback"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+    UIBarButtonItem *backBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qhjs_naviback.png" inBundleName:@"QuickHybridBundle"] style:(UIBarButtonItemStylePlain) target:self action:@selector(backAction)];
+    self.navigationItem.leftBarButtonItem = backBarButton;
+    _backBarButton = backBarButton;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)backAction {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)fullScreenPanGR:(UIPanGestureRecognizer *)sender {
+    
+}
+
 //开启progress
 - (void)showProgressWithMessage:(NSString *)message {
-//    UIView *superView = self.navigationController.view ?  : self.view;
-    UIView *superView = self.view;
-    WSProgressHUD *progressHUD = [[WSProgressHUD alloc] initWithView:superView];
-    [superView addSubview:progressHUD];
-    self.progressHUD = progressHUD;
-    if (message) {
+    WSProgressHUD *progressHUD = [[WSProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:progressHUD];
+    [self.view bringSubviewToFront:progressHUD];
+    _progressHUD = progressHUD;
+    if (message || (message.length > 0)) {
         [progressHUD showWithString:message maskType:(WSProgressHUDMaskTypeClear)];
     } else {
         [progressHUD showWithMaskType:(WSProgressHUDMaskTypeClear)];
@@ -74,14 +89,23 @@
     return self.statusBarStyle;
 }
 
+//设置状态栏的显示与隐藏
 - (void)changeStatusBarHiddenState:(BOOL)hidden {
     self.statusBarShouldHide = hidden;
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
+//设置状态栏样式
 - (void)changeStatusBarStyle:(UIStatusBarStyle)style {
     self.statusBarStyle = style;
     [self setNeedsStatusBarAppearanceUpdate];
+}
+
+#pragma mark --- 导航栏方法
+
+//是否拦截系统侧滑返回方法
+- (BOOL)hookInteractivePopGestureRecognizerEnabled {
+    return self.interactivePopGestureRecognizerEnabled;
 }
 
 - (void)didReceiveMemoryWarning {

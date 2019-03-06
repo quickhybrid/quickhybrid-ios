@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QHJSInfo.h"
+#import "UIImage+QHJSIamge.h"
 
 /**
  回调block
@@ -15,11 +17,25 @@ typedef void(^CallBack)(NSString *);
 
 @interface QHJSBaseViewController : UIViewController
 
-//传递参数
+/**
+ 传递参数的字典
+ */
 @property (nonatomic, strong) NSMutableDictionary *params;
 
-/** 传值 */
+/**
+ 回调传值
+ */
 @property (nonatomic, copy) CallBack pageCallback;
+
+/**
+ 左上角返回按钮
+ */
+@property (nonatomic, weak) UIBarButtonItem *backBarButton;
+
+/**
+ 导航栏左侧返回按钮方法
+ */
+- (void)backAction;
 
 /**
  开启progress
@@ -33,8 +49,6 @@ typedef void(^CallBack)(NSString *);
 
 /**
  设置状态栏的显示与隐藏
- 
- @param hidden 显隐状态
  */
 - (void)changeStatusBarHiddenState:(BOOL)hidden;
 
@@ -44,5 +58,20 @@ typedef void(^CallBack)(NSString *);
  @param style 状态栏样式
  */
 - (void)changeStatusBarStyle:(UIStatusBarStyle)style;
+
+/**
+ 系统侧滑返回的状态值
+ */
+@property (nonatomic, assign) BOOL interactivePopGestureRecognizerEnabled;
+
+/**
+ 是否拦截系统侧滑返回方法
+ */
+- (BOOL)hookInteractivePopGestureRecognizerEnabled;
+
+/**
+ 能否使用pop方法的值
+ */
+@property (nonatomic, assign) BOOL shouldPop;
 
 @end

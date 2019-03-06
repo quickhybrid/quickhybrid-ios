@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "QHJSBaseWebLoader.h"
+#import "TestViewController.h"
 
 @interface MainViewController ()
 
@@ -27,7 +28,20 @@
     NSURL *pathUrl = [[NSBundle mainBundle] URLForResource:@"quickhybrid/examples/index" withExtension:@"html"];
     [paramDic setObject:[pathUrl absoluteString] forKey:@"pageUrl"];
     vc.params = paramDic;
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    //改变push动画
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.25f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    
+    [self.navigationController pushViewController:vc animated:NO];
+}
+
+- (IBAction)aaaaa:(id)sender {
+    TestViewController *test = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:test animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,6 @@
 
 #import "QHJSBaseWebLoader.h"
 #import "WKWebViewJavascriptBridge.h"
-#import "QHJSInfo.h"
 
 static NSString *KVOContext;
 
@@ -19,6 +18,17 @@ static NSString *KVOContext;
 @property (nonatomic, weak) UIProgressView *progressView;
 /** 加载进度条的高度约束 */
 @property (nonatomic, strong) NSLayoutConstraint *progressH;
+
+/** 导航栏左上角页面返回按钮 */
+@property (nonatomic, strong) UIBarButtonItem *closeButtonItem;
+
+/** 导航栏右上角按钮，1在右，2在左 */
+@property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem1;
+/** 导航栏右上角按钮，1在右，2在左 */
+@property (nonatomic, strong) UIBarButtonItem *rightBarButtonItem2;
+
+/** 导航栏左上角按钮 */
+@property (nonatomic, strong) UIBarButtonItem *leftBarButtonItem;
 @end
 
 @implementation QHJSBaseWebLoader
@@ -26,20 +36,17 @@ static NSString *KVOContext;
 #pragma mark --- 生命周期
 
 + (void)initialize {
-    
-    // Set user agent (the only problem is that we can't modify the User-Agent later in the program)
     //改变User-Agent
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //获取默认UA
         NSString *defaultUA = [[UIWebView new] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
         
-        //设置UA，格式和
+        //设置UA格式，和h5约定
         NSString *version = [QHJSInfo getQHJSVersion];
         NSString *customerUA = [defaultUA stringByAppendingString:[NSString stringWithFormat:@" QuickHybridJs/%@", version]];
         
         [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"UserAgent":customerUA}];
-        
         [[NSUserDefaults standardUserDefaults] synchronize];
     });
 }
@@ -148,6 +155,9 @@ static NSString *KVOContext;
 
 #pragma mark --- KVO
 
+/**
+ KVO监听的相应方法
+ */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     // 判断是否是本类注册的KVO
     if (context == &KVOContext) {
@@ -183,9 +193,17 @@ static NSString *KVOContext;
         if (navigationAction.targetFrame == nil) {
             [self openWindow:navigationAction];
         } else if (navigationAction.navigationType == WKNavigationTypeLinkActivated) {
-            
+            [self setCloseBarBtn];
         }
-        decisionHandler(WKNavigationActionPolicyAllow);
+        
+        NSURL *url = navigationAction.request.URL;
+        //扫一扫支持iOS下载应用安装
+        if ([url.absoluteString hasPrefix:@"itms-services://"] || [url.absoluteString hasPrefix:@"https://itunes.apple.com/cn/app"]) {
+            [[UIApplication sharedApplication] openURL:url];
+            decisionHandler(WKNavigationActionPolicyCancel);
+        } else {
+            decisionHandler(WKNavigationActionPolicyAllow);
+        }
     }
 }
 
@@ -198,6 +216,36 @@ static NSString *KVOContext;
     [self.wv loadRequest:navigationAction.request];
 }
 
+- (void)setCloseBarBtn {
+    //初始化返回按钮
+    self.closeButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:(UIBarButtonItemStylePlain) target:self action:@selector(closeBtnAction:)];
+    
+    if (self.leftBarButtonItem) {
+        return;
+    }
+    
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItems = @[];
+    if (self.backBarButton) {
+        self.navigationItem.leftBarButtonItems = @[self.backBarButton, self.closeButtonItem];
+    }
+}
+
+- (void)closeBtnAction:(id)sender {
+    if ([self.bridge containObjectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookBackBtn"]) {
+        WVJBResponseCallback backCallback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookBackBtn"];
+        NSDictionary *dic = @{@"code":@1, @"msg":@"Native pop Action"};
+        backCallback(dic);
+    } else {
+        NSString *jsStr = [NSString stringWithFormat:@"closeAction()"];
+        [self.wv evaluateJavaScript:jsStr completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+            if (error) {
+                [self backAction];
+            }
+        }];
+    }
+}
+
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
     decisionHandler(WKNavigationResponsePolicyAllow);
 }
@@ -206,9 +254,9 @@ static NSString *KVOContext;
     
 }
 
-// 重定向
+//重定向
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-    
+    [self setCloseBarBtn];
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
@@ -291,34 +339,193 @@ static NSString *KVOContext;
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-#pragma mark --- 页面跳转
+#pragma mark --- QHJSPageApi
 
-- (void)presentNewVC:(UIViewController *)vc animated:(BOOL)animated {
-    __weak typeof(self) weakSelf = self;
-    [weakSelf presentViewController:vc animated:animated completion:nil];
-}
-
-- (void)pushNewVC:(UIViewController *)vc {
-    __weak typeof(self) weakSelf = self;
-    [weakSelf.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)backAction{
-    __weak typeof(self) weakSelf = self;
-    if (weakSelf.superVC) {
-        // 如果存在superVC,说明当前容器是“多个Quick容器”类型
-        [weakSelf.superVC.navigationController popViewControllerAnimated:YES];
-    } else {
-        // 如果不存在superVC，说明当前容器是普通容器，直接获取navigationController然后push
-        [weakSelf.navigationController popViewControllerAnimated:YES];
-    }
-    NSLog(@"BaseWebLoader back Action");
-}
-
+//刷新方法
 - (void)reloadWKWebview {
     [self.wv reload];
 }
 
+#pragma mark --- QHJSNavigatorApi
+
+//重写拦截系统侧滑返回的方法
+- (BOOL)hookInteractivePopGestureRecognizerEnabled {
+    if ([self.bridge containObjectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookSysBack"]) {
+        WVJBResponseCallback sysBackCallback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookSysBack"];
+        NSDictionary *dic = @{@"code":@1, @"msg":@"Native pop Action"};
+        sysBackCallback(dic);
+    }
+    return self.interactivePopGestureRecognizerEnabled;
+}
+
+//重写导航栏左侧返回按钮方法
+- (void)backAction {
+    if (self.shouldPop) {
+        [super backAction];
+    } else {
+        if ([self.bridge containObjectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookBackBtn"]) {
+            WVJBResponseCallback backCallback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookBackBtn"];
+            NSDictionary *dic = @{@"code":@1, @"msg":@"Native pop Action"};
+            backCallback(dic);
+        } else {
+            [super backAction];
+        }
+    }
+}
+
+/**
+ 设置导航栏按钮的方法
+ */
+- (void)setRightNaviItemAtIndex:(NSInteger)index andTitle:(NSString *)title OrImageUrl:(NSString *)imageUrl {
+    if (index == 1) {
+        if (title) {
+            self.rightBarButtonItem1 = [[UIBarButtonItem alloc] initWithTitle:title style:(UIBarButtonItemStylePlain) target:self action:@selector(clickRightNaviItem1:)];
+        } else {
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+            if (imageData) {
+                self.rightBarButtonItem1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithData:imageData] style:(UIBarButtonItemStylePlain) target:self action:@selector(clickRightNaviItem1:)];
+            } else {
+                self.rightBarButtonItem1 = [[UIBarButtonItem alloc] initWithTitle:@"图片" style:(UIBarButtonItemStylePlain) target:self action:@selector(clickRightNaviItem1:)];
+            }
+        }
+    } else {
+        if (title) {
+            self.rightBarButtonItem2 = [[UIBarButtonItem alloc] initWithTitle:title style:(UIBarButtonItemStylePlain) target:self action:@selector(clickRightNaviItem2:)];
+        } else {
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+            if (imageData) {
+                self.rightBarButtonItem2 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithData:imageData] style:(UIBarButtonItemStylePlain) target:self action:@selector(clickRightNaviItem2:)];
+            } else {
+                self.rightBarButtonItem2 = [[UIBarButtonItem alloc] initWithTitle:@"图片" style:(UIBarButtonItemStylePlain) target:self action:@selector(clickRightNaviItem2:)];
+            }
+        }
+    }
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItems = @[];
+    
+    if (self.rightBarButtonItem1) {
+        if (self.rightBarButtonItem2) {
+            self.navigationItem.rightBarButtonItems = @[self.rightBarButtonItem1, self.rightBarButtonItem2];
+        } else {
+            self.navigationItem.rightBarButtonItem = self.rightBarButtonItem1;
+        }
+    } else {
+        if (self.rightBarButtonItem2) {
+            self.navigationItem.rightBarButtonItem = self.rightBarButtonItem2;
+        }
+    }
+}
+
+- (void)clickRightNaviItem1:(id)sender {
+    if ([self.bridge containObjectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"setRightBtn1"]) {
+        WVJBResponseCallback callback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"setRightBtn1"];
+        NSDictionary *dic = @{@"code":@1, @"msg":@"rightBtn1Action"};
+        callback(dic);
+    }
+}
+
+- (void)clickRightNaviItem2:(id)sender {
+    if ([self.bridge containObjectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"setRightBtn2"]) {
+        WVJBResponseCallback callback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"setRightBtn2"];
+        NSDictionary *dic = @{@"code":@1, @"msg":@"rightBtn2Action"};
+        callback(dic);
+    }
+}
+
+/**
+ 隐藏导航栏右上角按钮的方法
+ 
+ @param index 位置索引，1在右，2在左
+ */
+- (void)hideRightNaviItemAtIndex:(NSInteger)index {
+    if (index == 1) {
+        self.rightBarButtonItem1 = nil;
+    } else {
+        self.rightBarButtonItem2 = nil;
+    }
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItems = @[];
+    
+    if (self.rightBarButtonItem1) {
+        if (self.rightBarButtonItem2) {
+            self.navigationItem.rightBarButtonItems = @[self.rightBarButtonItem1, self.rightBarButtonItem2];
+        } else {
+            self.navigationItem.rightBarButtonItem = self.rightBarButtonItem1;
+        }
+    } else {
+        if (self.rightBarButtonItem2) {
+            self.navigationItem.rightBarButtonItem = self.rightBarButtonItem2;
+        }
+    }
+}
+
+//设置导航栏左侧按钮
+- (void)setLeftNaviItemWithTitle:(NSString *)title OrImageUrl:(NSString *)imageUrl AndIsShowBackArrow:(NSInteger)isShowArrow {
+    if (title) {
+        self.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:(UIBarButtonItemStylePlain) target:self action:@selector(clickLeftNaviItem:)];
+    } else {
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+        if (imageData) {
+            self.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithData:imageData] style:(UIBarButtonItemStylePlain) target:self action:@selector(clickLeftNaviItem:)];
+        } else {
+            self.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"图片" style:(UIBarButtonItemStylePlain) target:self action:@selector(clickLeftNaviItem:)];
+        }
+    }
+    
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItems = @[];
+    if (self.backBarButton) {
+        if (self.leftBarButtonItem) {
+            self.navigationItem.leftBarButtonItems = @[self.backBarButton, self.leftBarButtonItem];
+        } else {
+            self.navigationItem.leftBarButtonItem = self.backBarButton;
+        }
+    } else {
+        if (self.leftBarButtonItem) {
+            self.navigationItem.leftBarButtonItem = self.leftBarButtonItem;
+        }
+    }
+}
+
+- (void)clickLeftNaviItem:(id)sender {
+    if ([self.bridge containObjectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"setLeftBtn"]) {
+        WVJBResponseCallback callback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"setLeftBtn"];
+        NSDictionary *dic = @{@"code":@1, @"msg":@"leftBtnAction"};
+        callback(dic);
+    }
+}
+
+//隐藏导航栏左上角自定义按钮的方法
+- (void)hideLeftNaviItem {
+    self.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItems = @[];
+    
+    if (self.backBarButton) {
+        if (self.closeButtonItem) {
+            self.navigationItem.leftBarButtonItems = @[self.backBarButton, self.closeButtonItem];
+        } else {
+            self.navigationItem.leftBarButtonItem = self.backBarButton;
+        }
+    } else {
+        if (self.closeButtonItem) {
+            self.navigationItem.leftBarButtonItem = self.closeButtonItem;
+        }
+    }
+}
+
+#pragma mark --- MFMessageComposeViewControllerDelegate
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+
+
+
+//注册自定义API的方法
 - (BOOL)registerHandlersWithClassName:(NSString *)className moduleName:(NSString *)moduleName {
     return [self.bridge registerHandlersWithClassName:className moduleName:moduleName];
 }
@@ -326,16 +533,10 @@ static NSString *KVOContext;
 - (void)dealloc {
     [self.wv.configuration.userContentController removeScriptMessageHandlerForName:@"WKWebViewJavascriptBridge"];
     [self.wv.configuration.userContentController removeAllUserScripts];
-    
-    
-//    self.wv.configuration.userContentController.removeScriptMessageHandler(forName: iOS_Native_InjectJavascript)
-//    self.wv.configuration.userContentController.removeScriptMessageHandler(forName: iOS_Native_FlushMessageQueue)
-//    self.wv.configuration.userContentController.removeScriptMessageHandler(forName: iOS_WKWebViewJavascriptBridge)
-//    self.wv.configuration.userContentController.removeAllUserScripts()
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self.wv removeObserver:self forKeyPath:@"title" context:&KVOContext];
     [self.wv removeObserver:self forKeyPath:@"estimatedProgress" context:&KVOContext];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     NSLog(@"<QHJSBaseWebLoader>dealloc");
 }

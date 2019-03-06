@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C7A7F920D6760E4A01F63BE8 /* libPods-QuickHybridDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */; };
-		F105E795221E359D0098F520 /* QHJSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F105E794221E359D0098F520 /* QHJSNavigationViewController.m */; };
+		F105E795221E359D0098F520 /* QHJSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F105E794221E359D0098F520 /* QHJSNavigationController.m */; };
+		F178508C222FB0B400112C8F /* QHJSLocationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F178508B222FB0B400112C8F /* QHJSLocationUtil.m */; };
+		F1785093222FC61500112C8F /* TQLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F1785091222FC61500112C8F /* TQLocationConverter.m */; };
+		F1785097222FC61D00112C8F /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F1785095222FC61D00112C8F /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F178509B222FC9C500112C8F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F1785099222FC9C500112C8F /* Reachability.m */; };
+		F178509E222FCA5800112C8F /* QHJSDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F178509D222FCA5800112C8F /* QHJSDeviceInfo.m */; };
 		F1AB1787205763A300E66E46 /* quickhybrid in Resources */ = {isa = PBXBuildFile; fileRef = F1AB1786205763A300E66E46 /* quickhybrid */; };
 		F1CA90DC2035C70100ECEA1E /* QHJSAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */; };
 		F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */; };
@@ -26,10 +31,10 @@
 		F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D62035C70100ECEA1E /* QHJSInfo.m */; };
 		F1CA90EA2035C70100ECEA1E /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */; };
 		F1CA90EB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */; };
-		F1CA90EF2035CA5F00ECEA1E /* qhjs_naviback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */; };
 		F1CA90F22035CC8E00ECEA1E /* QHJSNaviTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */; };
-		F1CA90F42035D09200ECEA1E /* qhjs_downarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */; };
 		F1CA90F72035D6BC00ECEA1E /* QHJSNaviSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CA90F62035D6BC00ECEA1E /* QHJSNaviSegmentView.m */; };
+		F1E7D377221FE1ED009F14B5 /* QuickHybridBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1E7D376221FE1ED009F14B5 /* QuickHybridBundle.bundle */; };
+		F1E7D37A221FE797009F14B5 /* UIImage+QHJSIamge.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E7D379221FE797009F14B5 /* UIImage+QHJSIamge.m */; };
 		F1EA0BD5203168DA0086BC44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0BD4203168DA0086BC44 /* AppDelegate.m */; };
 		F1EA0BDD203168DA0086BC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0BDC203168DA0086BC44 /* Assets.xcassets */; };
 		F1EA0BE0203168DA0086BC44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0BDE203168DA0086BC44 /* LaunchScreen.storyboard */; };
@@ -39,14 +44,25 @@
 		F1EA0C2120316AD40086BC44 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0C1C20316AD30086BC44 /* HelloViewController.xib */; };
 		F1EA0C2220316AD40086BC44 /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C1D20316AD30086BC44 /* HelloViewController.m */; };
 		F1EA0C2320316AD40086BC44 /* TestPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C2020316AD40086BC44 /* TestPayApi.m */; };
+		F1EC836822261B260013F91D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC836722261B260013F91D /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D09D2CB3DAA4E6C8392564B /* libPods-QuickHybridDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickHybridDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		566611FD103C8EE828F9BCC8 /* Pods-QuickHybridDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickHybridDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8FF1BC0799E08ACD8EB1B6F3 /* Pods-QuickHybridDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickHybridDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickHybridDemo/Pods-QuickHybridDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F105E793221E359D0098F520 /* QHJSNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNavigationViewController.h; sourceTree = "<group>"; };
-		F105E794221E359D0098F520 /* QHJSNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNavigationViewController.m; sourceTree = "<group>"; };
+		F105E793221E359D0098F520 /* QHJSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNavigationController.h; sourceTree = "<group>"; };
+		F105E794221E359D0098F520 /* QHJSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNavigationController.m; sourceTree = "<group>"; };
+		F178508A222FB0B400112C8F /* QHJSLocationUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSLocationUtil.h; sourceTree = "<group>"; };
+		F178508B222FB0B400112C8F /* QHJSLocationUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSLocationUtil.m; sourceTree = "<group>"; };
+		F1785091222FC61500112C8F /* TQLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQLocationConverter.m; sourceTree = "<group>"; };
+		F1785092222FC61500112C8F /* TQLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQLocationConverter.h; sourceTree = "<group>"; };
+		F1785095222FC61D00112C8F /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		F1785096222FC61D00112C8F /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		F1785099222FC9C500112C8F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F178509A222FC9C500112C8F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F178509C222FCA5800112C8F /* QHJSDeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSDeviceInfo.h; sourceTree = "<group>"; };
+		F178509D222FCA5800112C8F /* QHJSDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSDeviceInfo.m; sourceTree = "<group>"; };
 		F1AB1786205763A300E66E46 /* quickhybrid */ = {isa = PBXFileReference; lastKnownFileType = folder; path = quickhybrid; sourceTree = "<group>"; };
 		F1B43140221D551C00C30945 /* QuickHybridDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickHybridDemo.pch; sourceTree = "<group>"; };
 		F1CA90B82035C70100ECEA1E /* QHJSAuthApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHJSAuthApi.h; sourceTree = "<group>"; };
@@ -80,12 +96,13 @@
 		F1CA90D92035C70100ECEA1E /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		F1CA90DA2035C70100ECEA1E /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		F1CA90DB2035C70100ECEA1E /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qhjs_naviback@2x.png"; sourceTree = "<group>"; };
 		F1CA90F02035CC8E00ECEA1E /* QHJSNaviTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNaviTitleView.h; sourceTree = "<group>"; };
 		F1CA90F12035CC8E00ECEA1E /* QHJSNaviTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNaviTitleView.m; sourceTree = "<group>"; };
-		F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qhjs_downarrow@2x.png"; sourceTree = "<group>"; };
 		F1CA90F52035D6BC00ECEA1E /* QHJSNaviSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHJSNaviSegmentView.h; sourceTree = "<group>"; };
 		F1CA90F62035D6BC00ECEA1E /* QHJSNaviSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHJSNaviSegmentView.m; sourceTree = "<group>"; };
+		F1E7D376221FE1ED009F14B5 /* QuickHybridBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QuickHybridBundle.bundle; sourceTree = "<group>"; };
+		F1E7D378221FE797009F14B5 /* UIImage+QHJSIamge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+QHJSIamge.h"; sourceTree = "<group>"; };
+		F1E7D379221FE797009F14B5 /* UIImage+QHJSIamge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QHJSIamge.m"; sourceTree = "<group>"; };
 		F1EA0BD0203168DA0086BC44 /* QuickHybridDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickHybridDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA0BD3203168DA0086BC44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1EA0BD4203168DA0086BC44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +118,8 @@
 		F1EA0C1E20316AD40086BC44 /* TestPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPayApi.h; sourceTree = "<group>"; };
 		F1EA0C1F20316AD40086BC44 /* HelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloViewController.h; sourceTree = "<group>"; };
 		F1EA0C2020316AD40086BC44 /* TestPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPayApi.m; sourceTree = "<group>"; };
+		F1EC836622261B260013F91D /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F1EC836722261B260013F91D /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +151,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F1785090222FC61500112C8F /* PublicTool */ = {
+			isa = PBXGroup;
+			children = (
+				F1785092222FC61500112C8F /* TQLocationConverter.h */,
+				F1785091222FC61500112C8F /* TQLocationConverter.m */,
+				F1785098222FC9C500112C8F /* Reachability */,
+				F1785094222FC61D00112C8F /* SFHFKeychainUtils */,
+			);
+			path = PublicTool;
+			sourceTree = "<group>";
+		};
+		F1785094222FC61D00112C8F /* SFHFKeychainUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F1785096222FC61D00112C8F /* SFHFKeychainUtils.h */,
+				F1785095222FC61D00112C8F /* SFHFKeychainUtils.m */,
+			);
+			path = SFHFKeychainUtils;
+			sourceTree = "<group>";
+		};
+		F1785098222FC9C500112C8F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F1785099222FC9C500112C8F /* Reachability.m */,
+				F178509A222FC9C500112C8F /* Reachability.h */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		F1CA90B62035C70100ECEA1E /* QuickHybird */ = {
 			isa = PBXGroup;
 			children = (
 				F1CA90C62035C70100ECEA1E /* QHJSModules.plist */,
-				F1CA90C72035C70100ECEA1E /* QHJSRes */,
+				F1E7D376221FE1ED009F14B5 /* QuickHybridBundle.bundle */,
 				F1CA90D42035C70100ECEA1E /* QuickHybridUtils */,
 				F1CA90CF2035C70100ECEA1E /* QuickHybridCore */,
 				F1CA90C82035C70100ECEA1E /* QuickHybridComponents */,
@@ -157,23 +205,14 @@
 				F1CA90C52035C70100ECEA1E /* QHJSUIApi.m */,
 				F1CA90BC2035C70100ECEA1E /* QHJSNavigatorApi.h */,
 				F1CA90BD2035C70100ECEA1E /* QHJSNavigatorApi.m */,
-				F1CA90B82035C70100ECEA1E /* QHJSAuthApi.h */,
-				F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */,
-				F1CA90BA2035C70100ECEA1E /* QHJSDeviceApi.h */,
-				F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */,
 				F1CA90C22035C70100ECEA1E /* QHJSRuntimeApi.h */,
 				F1CA90C32035C70100ECEA1E /* QHJSRuntimeApi.m */,
+				F1CA90BA2035C70100ECEA1E /* QHJSDeviceApi.h */,
+				F1CA90BB2035C70100ECEA1E /* QHJSDeviceApi.m */,
+				F1CA90B82035C70100ECEA1E /* QHJSAuthApi.h */,
+				F1CA90B92035C70100ECEA1E /* QHJSAuthApi.m */,
 			);
 			path = QHJSFrameAPI;
-			sourceTree = "<group>";
-		};
-		F1CA90C72035C70100ECEA1E /* QHJSRes */ = {
-			isa = PBXGroup;
-			children = (
-				F1CA90EE2035CA5F00ECEA1E /* qhjs_naviback@2x.png */,
-				F1CA90F32035D09200ECEA1E /* qhjs_downarrow@2x.png */,
-			);
-			path = QHJSRes;
 			sourceTree = "<group>";
 		};
 		F1CA90C82035C70100ECEA1E /* QuickHybridComponents */ = {
@@ -196,8 +235,8 @@
 		F1CA90CF2035C70100ECEA1E /* QuickHybridCore */ = {
 			isa = PBXGroup;
 			children = (
-				F105E793221E359D0098F520 /* QHJSNavigationViewController.h */,
-				F105E794221E359D0098F520 /* QHJSNavigationViewController.m */,
+				F105E793221E359D0098F520 /* QHJSNavigationController.h */,
+				F105E794221E359D0098F520 /* QHJSNavigationController.m */,
 				F1CA90D02035C70100ECEA1E /* QHJSBaseViewController.h */,
 				F1CA90D12035C70100ECEA1E /* QHJSBaseViewController.m */,
 				F1CA90D22035C70100ECEA1E /* QHJSBaseWebLoader.h */,
@@ -211,6 +250,13 @@
 			children = (
 				F1CA90D52035C70100ECEA1E /* QHJSInfo.h */,
 				F1CA90D62035C70100ECEA1E /* QHJSInfo.m */,
+				F1E7D378221FE797009F14B5 /* UIImage+QHJSIamge.h */,
+				F1E7D379221FE797009F14B5 /* UIImage+QHJSIamge.m */,
+				F178508A222FB0B400112C8F /* QHJSLocationUtil.h */,
+				F178508B222FB0B400112C8F /* QHJSLocationUtil.m */,
+				F178509C222FCA5800112C8F /* QHJSDeviceInfo.h */,
+				F178509D222FCA5800112C8F /* QHJSDeviceInfo.m */,
+				F1785090222FC61500112C8F /* PublicTool */,
 			);
 			path = QuickHybridUtils;
 			sourceTree = "<group>";
@@ -257,6 +303,8 @@
 				F1EA0C1F20316AD40086BC44 /* HelloViewController.h */,
 				F1EA0C1D20316AD30086BC44 /* HelloViewController.m */,
 				F1EA0C1C20316AD30086BC44 /* HelloViewController.xib */,
+				F1EC836622261B260013F91D /* TestViewController.h */,
+				F1EC836722261B260013F91D /* TestViewController.m */,
 				F1EA0BD3203168DA0086BC44 /* AppDelegate.h */,
 				F1EA0BD4203168DA0086BC44 /* AppDelegate.m */,
 				F1EA0BDC203168DA0086BC44 /* Assets.xcassets */,
@@ -333,10 +381,9 @@
 				F1EA0BE0203168DA0086BC44 /* LaunchScreen.storyboard in Resources */,
 				F1EA0BDD203168DA0086BC44 /* Assets.xcassets in Resources */,
 				F1AB1787205763A300E66E46 /* quickhybrid in Resources */,
-				F1CA90F42035D09200ECEA1E /* qhjs_downarrow@2x.png in Resources */,
 				F1EA0C1A20316AA50086BC44 /* MainViewController.xib in Resources */,
 				F1EA0C2120316AD40086BC44 /* HelloViewController.xib in Resources */,
-				F1CA90EF2035CA5F00ECEA1E /* qhjs_naviback@2x.png in Resources */,
+				F1E7D377221FE1ED009F14B5 /* QuickHybridBundle.bundle in Resources */,
 				F1CA90E32035C70100ECEA1E /* QHJSModules.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,17 +459,24 @@
 				F1EA0BE3203168DA0086BC44 /* main.m in Sources */,
 				F1EA0BD5203168DA0086BC44 /* AppDelegate.m in Sources */,
 				F1CA90E62035C70100ECEA1E /* QHJSToast.m in Sources */,
+				F1785097222FC61D00112C8F /* SFHFKeychainUtils.m in Sources */,
 				F1CA90E12035C70100ECEA1E /* QHJSRuntimeApi.m in Sources */,
+				F1E7D37A221FE797009F14B5 /* UIImage+QHJSIamge.m in Sources */,
+				F178508C222FB0B400112C8F /* QHJSLocationUtil.m in Sources */,
 				F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */,
 				F1CA90E02035C70100ECEA1E /* QHJSRegisterBaseClass.m in Sources */,
-				F105E795221E359D0098F520 /* QHJSNavigationViewController.m in Sources */,
+				F1EC836822261B260013F91D /* TestViewController.m in Sources */,
+				F105E795221E359D0098F520 /* QHJSNavigationController.m in Sources */,
+				F1785093222FC61500112C8F /* TQLocationConverter.m in Sources */,
 				F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */,
 				F1EA0C2320316AD40086BC44 /* TestPayApi.m in Sources */,
 				F1CA90F22035CC8E00ECEA1E /* QHJSNaviTitleView.m in Sources */,
 				F1CA90E42035C70100ECEA1E /* QHJSBaseModalViewController.m in Sources */,
 				F1CA90DF2035C70100ECEA1E /* QHJSPageApi.m in Sources */,
+				F178509B222FC9C500112C8F /* Reachability.m in Sources */,
 				F1EA0C1B20316AA50086BC44 /* MainViewController.m in Sources */,
 				F1CA90E52035C70100ECEA1E /* QHJSDatePickViewController.m in Sources */,
+				F178509E222FCA5800112C8F /* QHJSDeviceInfo.m in Sources */,
 				F1CA90EA2035C70100ECEA1E /* WebViewJavascriptBridgeBase.m in Sources */,
 				F1CA90E82035C70100ECEA1E /* QHJSBaseWebLoader.m in Sources */,
 			);

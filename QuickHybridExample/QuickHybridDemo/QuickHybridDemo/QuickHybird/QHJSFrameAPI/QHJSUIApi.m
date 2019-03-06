@@ -16,6 +16,7 @@
     
     __weak typeof(self) weakSelf = self;
     
+    //弹框提示
     [self registerHandlerName:@"toast" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSString *message = data[@"message"];
         NSString *duration = data[@"duration"];
@@ -29,6 +30,7 @@
         responseCallback(resDic);
     }];
     
+    //原生alert
     [self registerHandlerName:@"showDebugDialog" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSString *debugInfo = [data objectForKey:@"debugInfo"];
         if (debugInfo.length == 0) {
@@ -69,7 +71,7 @@
                 }];
                 [alertController addAction:action];
             }
-            [weakSelf.webloader presentNewVC:alertController animated:YES];
+            [weakSelf.webloader presentViewController:alertController animated:YES completion:nil];
         }
     }];
     
@@ -90,6 +92,7 @@
         responseCallback(dic);
     }];
     
+    // 原生的actionSheet
     [self registerHandlerName:@"actionSheet" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSString *title = data[@"title"];
         NSArray *items = data[@"items"];
@@ -108,9 +111,10 @@
             
         }];
         [alertController addAction:cancelAction];
-        [weakSelf.webloader presentNewVC:alertController animated:YES];
+        [weakSelf.webloader presentViewController:alertController animated:YES completion:nil];
     }];
     
+    // 原生的日期选择器
     [self registerHandlerName:@"pickDate" handler:^(id data, WVJBResponseCallback responseCallback) {
         QHJSDatePickViewController *datePickerController = [[QHJSDatePickViewController alloc] init];
         datePickerController.datePickerMode = QHJSDatePickerDate;
@@ -124,6 +128,7 @@
         [datePickerController showByModalInController:weakSelf.webloader];
     }];
     
+    // 原生的时间选择器
     [self registerHandlerName:@"pickTime" handler:^(id data, WVJBResponseCallback responseCallback) {
         QHJSDatePickViewController *datePickerController = [[QHJSDatePickViewController alloc] init];
         datePickerController.datePickerMode = QHJSDatePickerModeTime;

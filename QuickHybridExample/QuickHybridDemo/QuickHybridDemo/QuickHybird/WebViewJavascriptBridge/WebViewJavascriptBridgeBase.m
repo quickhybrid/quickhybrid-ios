@@ -231,6 +231,7 @@ static int logMaxLength = 500;
 }
 
 - (void)excuteMsg:(NSDictionary *)msgDic {
+    __weak typeof(self) weakSelf = self;
     // 输出内容
     NSLog(@"RCVC:%@", msgDic);
     
@@ -260,8 +261,8 @@ static int logMaxLength = 500;
             if (responseData == nil) {
                 responseData = [NSNull null];
             }
-            WVJBMessage* msg = @{@"responseId":callbackId, @"responseData":responseData};
-            [self _queueMessage:msg];
+            WVJBMessage *msg = @{@"responseId":callbackId, @"responseData":responseData};
+            [weakSelf _queueMessage:msg];
         };
     } else {
         responseCallback = ^(id ignoreResponseData) {

@@ -51,6 +51,25 @@
  */
 - (void)handleErrorWithCode:(NSInteger)errorCode errorUrl:(NSString *)errorUrl errorDescription:(NSString *)errorDescription;
 
+/**
+ 获取页面内临时缓存的数据或方法
+ */
+- (id)objectForKeyInCacheDicWithModuleName:(NSString *)moduleName KeyName:(NSString *)keyName;
+
+/**
+ 删除页面内临时缓存的数据或方法
+ */
+- (void)removeObjectForKeyInCacheDicWithModuleName:(NSString *)moduleName KeyName:(NSString *)keyName;
+
+/**
+ 是否包含指定的value值
+
+ @param moduleName 框架API模块名称
+ @param keyName key
+ @return yes/no
+ */
+- (BOOL)containObjectForKeyInCacheDicWithModuleName:(NSString *)moduleName KeyName:(NSString *)keyName;
+
 @end
 
 #endif

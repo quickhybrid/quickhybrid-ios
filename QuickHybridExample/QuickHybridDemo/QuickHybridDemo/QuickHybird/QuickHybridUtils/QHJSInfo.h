@@ -3,7 +3,7 @@
 //  QuickHybridDemo
 //
 //  Created by guanhao on 2017/12/31.
-//  Copyright © 2017年 quickhybrid. All rights reserved.
+//  Copyright © 2017年 com.quickhybrid. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

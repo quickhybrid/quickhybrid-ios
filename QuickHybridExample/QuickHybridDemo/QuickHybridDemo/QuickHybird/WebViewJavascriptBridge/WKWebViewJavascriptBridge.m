@@ -113,7 +113,6 @@
 
 //注册框架已有的API
 - (void)registerFrameAPI {
-    // 注册ui api
     [self registerHandlersWithClassName:@"QHJSPageApi" moduleName:@"page"];
     [self registerHandlersWithClassName:@"QHJSUIApi" moduleName:@"ui"];
     [self registerHandlersWithClassName:@"QHJSNavigatorApi" moduleName:@"navigator"];
@@ -141,14 +140,46 @@
     return registerSuccess;
 }
 
+//获取页面内临时缓存的数据或方法
+- (id)objectForKeyInCacheDicWithModuleName:(NSString *)moduleName KeyName:(NSString *)keyName {
+    if ([_base.modulesDic.allKeys containsObject:moduleName]) {
+        QHJSRegisterBaseClass *bs = [_base.modulesDic objectForKey:moduleName];
+        id object = [bs objectForKeyInCacheDic:keyName];
+        if (object) {
+            return object;
+        }
+    }
+    return nil;
+}
+
+- (BOOL)containObjectForKeyInCacheDicWithModuleName:(NSString *)moduleName KeyName:(NSString *)keyName {
+    if ([_base.modulesDic.allKeys containsObject:moduleName]) {
+        QHJSRegisterBaseClass *bs = [_base.modulesDic objectForKey:moduleName];
+        if ([bs containObjectForKeyInCacheDic:keyName]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+//删除页面内临时缓存的数据或方法
+- (void)removeObjectForKeyInCacheDicWithModuleName:(NSString *)moduleName KeyName:(NSString *)keyName {
+    QHJSRegisterBaseClass *bs = [_base.modulesDic objectForKey:moduleName];
+    [bs removeObjectForKeyInCacheDic:keyName];
+}
+
 #pragma mark - WKScriptMessageHandler
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     if ([message.name isEqualToString:@"WKWebViewJavascriptBridge"]) {
+        //解析数据
         [self excuteMessage:message.body];
     }
 }
 
+/**
+ 解析数据等逻辑
+ */
 - (void)excuteMessage:(NSString *)message {
 //    NSString *msgUTF8 = [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 //    NSString *msgUTF8 = [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];

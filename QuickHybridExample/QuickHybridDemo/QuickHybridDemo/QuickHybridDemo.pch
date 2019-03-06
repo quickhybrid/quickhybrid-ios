@@ -12,13 +12,13 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#ifdef __OBJC__
-#define QGJS_DEBUG
-#ifdef QGJS_DEBUG
-#define NSLog(...) NSLog(__VA_ARGS__)
-#else
-#define NSLog(...)
-#endif
-#endif
+//#ifdef __OBJC__
+//#define QGJS_DEBUG
+//#ifdef QGJS_DEBUG
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#else
+//#define NSLog(...)
+//#endif
+//#endif
 
 #endif /* QuickHybridDemo_pch */
