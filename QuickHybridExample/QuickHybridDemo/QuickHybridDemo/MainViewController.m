@@ -2,13 +2,12 @@
 //  TestViewController.m
 //  QuickHybirdJSBridgeDemo
 //
-//  Created by 管浩 on 2017/12/30.
+//  Created by guanhao on 2017/12/30.
 //  Copyright © 2017年 com.gh. All rights reserved.
 //
 
 #import "MainViewController.h"
 #import "QHJSBaseWebLoader.h"
-#import "TestViewController.h"
 
 @interface MainViewController ()
 
@@ -37,11 +36,6 @@
     [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
     
     [self.navigationController pushViewController:vc animated:NO];
-}
-
-- (IBAction)aaaaa:(id)sender {
-    TestViewController *test = [[TestViewController alloc] init];
-    [self.navigationController pushViewController:test animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

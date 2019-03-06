@@ -44,7 +44,6 @@
 		F1EA0C2120316AD40086BC44 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1EA0C1C20316AD30086BC44 /* HelloViewController.xib */; };
 		F1EA0C2220316AD40086BC44 /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C1D20316AD30086BC44 /* HelloViewController.m */; };
 		F1EA0C2320316AD40086BC44 /* TestPayApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA0C2020316AD40086BC44 /* TestPayApi.m */; };
-		F1EC836822261B260013F91D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC836722261B260013F91D /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,8 +117,6 @@
 		F1EA0C1E20316AD40086BC44 /* TestPayApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPayApi.h; sourceTree = "<group>"; };
 		F1EA0C1F20316AD40086BC44 /* HelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloViewController.h; sourceTree = "<group>"; };
 		F1EA0C2020316AD40086BC44 /* TestPayApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPayApi.m; sourceTree = "<group>"; };
-		F1EC836622261B260013F91D /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		F1EC836722261B260013F91D /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,8 +300,6 @@
 				F1EA0C1F20316AD40086BC44 /* HelloViewController.h */,
 				F1EA0C1D20316AD30086BC44 /* HelloViewController.m */,
 				F1EA0C1C20316AD30086BC44 /* HelloViewController.xib */,
-				F1EC836622261B260013F91D /* TestViewController.h */,
-				F1EC836722261B260013F91D /* TestViewController.m */,
 				F1EA0BD3203168DA0086BC44 /* AppDelegate.h */,
 				F1EA0BD4203168DA0086BC44 /* AppDelegate.m */,
 				F1EA0BDC203168DA0086BC44 /* Assets.xcassets */,
@@ -465,7 +460,6 @@
 				F178508C222FB0B400112C8F /* QHJSLocationUtil.m in Sources */,
 				F1CA90DD2035C70100ECEA1E /* QHJSDeviceApi.m in Sources */,
 				F1CA90E02035C70100ECEA1E /* QHJSRegisterBaseClass.m in Sources */,
-				F1EC836822261B260013F91D /* TestViewController.m in Sources */,
 				F105E795221E359D0098F520 /* QHJSNavigationController.m in Sources */,
 				F1785093222FC61500112C8F /* TQLocationConverter.m in Sources */,
 				F1CA90E92035C70100ECEA1E /* QHJSInfo.m in Sources */,
