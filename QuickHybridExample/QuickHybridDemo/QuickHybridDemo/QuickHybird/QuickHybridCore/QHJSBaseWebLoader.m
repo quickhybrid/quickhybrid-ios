@@ -172,8 +172,9 @@ static NSString *KVOContext;
             self.progressView.progress = progress.floatValue;
             if (progress.floatValue == 1.0) {
                 self.progressH.constant = 0;
-                [UIView animateWithDuration:0.5 animations:^{
-                    [self.view layoutIfNeeded];
+                __weak typeof(self) weakSelf = self;
+                [UIView animateWithDuration:0.25 animations:^{
+                    [weakSelf.view layoutIfNeeded];
                 }];
             }
         }
@@ -367,8 +368,6 @@ static NSString *KVOContext;
             WVJBResponseCallback backCallback = (WVJBResponseCallback)[self.bridge objectForKeyInCacheDicWithModuleName:@"navigator" KeyName:@"hookBackBtn"];
             NSDictionary *dic = @{@"code":@1, @"msg":@"Native pop Action"};
             backCallback(dic);
-        } else {
-            [super backAction];
         }
     }
 }
@@ -520,10 +519,7 @@ static NSString *KVOContext;
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-
-
-
+#pragma mark --- QHJSAuthApi
 
 //注册自定义API的方法
 - (BOOL)registerHandlersWithClassName:(NSString *)className moduleName:(NSString *)moduleName {

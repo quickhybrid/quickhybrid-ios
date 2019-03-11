@@ -59,9 +59,7 @@
  */
 - (void)hideLeftNaviItem;
 
-
-
-
+#pragma mark --- QHJSAuthApi
 
 /**
  通过容器中持有的bridge属性注册API的方法，

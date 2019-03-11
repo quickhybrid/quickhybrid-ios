@@ -17,19 +17,33 @@
 /** 状态栏样式 */
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
 
+/** 打开初始朝向 */
+@property (nonatomic, assign) UIInterfaceOrientation interfaceOrientation;
+/** 是否自动旋转，默认NO */
+@property (nonatomic, assign) BOOL autorotate;
+/** 支持的旋转方向 */
+@property (nonatomic, assign) UIInterfaceOrientationMask orientationsMask;
 @end
 
 @implementation QHJSBaseViewController
-
-#pragma mark --- setter/getter方法
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         _statusBarStyle = UIStatusBarStyleDefault;
         _statusBarShouldHide = NO;
+        
+        //默认可以侧滑返回
         _interactivePopGestureRecognizerEnabled = YES;
+        //默认可以pop代码返回
         _shouldPop = YES;
+        
+        //默认竖屏
+        _interfaceOrientation = UIInterfaceOrientationPortrait;
+        //默认可以旋转
+        _autorotate = YES;
+        //默人只能旋转到竖屏
+        _orientationsMask = UIInterfaceOrientationMaskPortrait;
     }
     return self;
 }
@@ -47,6 +61,28 @@
     UIBarButtonItem *backBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qhjs_naviback.png" inBundleName:@"QuickHybridBundle"] style:(UIBarButtonItemStylePlain) target:self action:@selector(backAction)];
     self.navigationItem.leftBarButtonItem = backBarButton;
     _backBarButton = backBarButton;
+    
+    //屏幕旋转
+    NSNumber *orientation = self.params[@"orientation"];
+    if (orientation) {
+        if ([orientation integerValue] == 0) {
+            //强制横屏
+            [self setInterfaceOrientation:UIInterfaceOrientationLandscapeLeft];
+            [self setAutorotate:YES];
+            [self setOrientationsMask:UIInterfaceOrientationMaskLandscape];
+            [self forceToOrientation:UIDeviceOrientationLandscapeLeft];
+        } else if ([orientation integerValue] == 1) {
+            //强制竖屏
+            [self setInterfaceOrientation:UIInterfaceOrientationPortrait];
+            [self setAutorotate:YES];
+            [self setOrientationsMask:UIInterfaceOrientationMaskPortrait];
+            [self forceToOrientation:UIDeviceOrientationPortrait];
+        } else if ([orientation integerValue] == 2) {
+            //跟随系统
+            [self setOrientationsMask:UIInterfaceOrientationMaskAll];
+            [self setAutorotate:YES];
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -54,11 +90,9 @@
 }
 
 - (void)backAction {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)fullScreenPanGR:(UIPanGestureRecognizer *)sender {
-    
+    if (self.shouldPop) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 //开启progress
@@ -106,6 +140,36 @@
 //是否拦截系统侧滑返回方法
 - (BOOL)hookInteractivePopGestureRecognizerEnabled {
     return self.interactivePopGestureRecognizerEnabled;
+}
+
+#pragma mark --- 屏幕旋转控制
+
+//打开时当前页面朝向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return self.interfaceOrientation;
+}
+
+//是否支持旋转
+- (BOOL)shouldAutorotate {
+    return self.autorotate;
+}
+
+//支持的旋转方向
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return self.orientationsMask;
+}
+
+//主动强制横竖屏方法
+- (void)forceToOrientation:(UIDeviceOrientation)orientation {
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+        SEL selector = NSSelectorFromString(@"setOrientation:");
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:[UIDevice currentDevice]];
+        int val = orientation;
+        [invocation setArgument:&val atIndex:2];
+        [invocation invoke];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,7 +18,32 @@
     
     //屏幕旋转方向
     [self registerHandlerName:@"setOrientation" handler:^(id data, WVJBResponseCallback responseCallback) {
-        
+        NSInteger orientation = [data[@"orientation"] integerValue];
+        if (orientation == 0) {
+            //强制横屏
+            [weakSelf.webloader setInterfaceOrientation:UIInterfaceOrientationLandscapeLeft];
+            [weakSelf.webloader setAutorotate:YES];
+            [weakSelf.webloader setOrientationsMask:UIInterfaceOrientationMaskLandscape];
+            [weakSelf.webloader.params setObject:@0 forKey:@"orientation"];
+            [weakSelf.webloader forceToOrientation:UIDeviceOrientationLandscapeLeft];
+        } else if (orientation == 1) {
+            //强制竖屏
+            [weakSelf.webloader setInterfaceOrientation:UIInterfaceOrientationPortrait];
+            [weakSelf.webloader setAutorotate:YES];
+            [weakSelf.webloader setOrientationsMask:UIInterfaceOrientationMaskPortrait];
+            [weakSelf.webloader.params setObject:@1 forKey:@"orientation"];
+            [weakSelf.webloader forceToOrientation:UIDeviceOrientationPortrait];
+        } else if (orientation == 2) {
+            //跟随系统
+            [weakSelf.webloader setOrientationsMask:UIInterfaceOrientationMaskAll];
+            [weakSelf.webloader setAutorotate:YES];
+            [weakSelf.webloader.params setObject:@2 forKey:@"orientation"];
+        } else {
+            //还原默认
+            [weakSelf.webloader.params setObject:@-1 forKey:@"orientation"];
+            [weakSelf.webloader setOrientationsMask:UIInterfaceOrientationMaskPortrait];
+            [weakSelf.webloader setAutorotate:NO];
+        }
     }];
     
     //获取设备id

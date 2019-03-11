@@ -60,7 +60,7 @@ typedef void(^CallBack)(NSString *);
 - (void)changeStatusBarStyle:(UIStatusBarStyle)style;
 
 /**
- 系统侧滑返回的状态值
+ 系统侧滑返回的状态值，默认yes
  */
 @property (nonatomic, assign) BOOL interactivePopGestureRecognizerEnabled;
 
@@ -70,8 +70,29 @@ typedef void(^CallBack)(NSString *);
 - (BOOL)hookInteractivePopGestureRecognizerEnabled;
 
 /**
- 能否使用pop方法的值
+ 能否使用popViewControllerAnimated方法的值
  */
 @property (nonatomic, assign) BOOL shouldPop;
+
+
+/**
+ setter方法，设置初始方向，默认竖屏
+ */
+- (void)setInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
+
+/**
+ setter方法，设置控制器是否自动旋转，默认NO
+ */
+- (void)setAutorotate:(BOOL)autorotate;
+
+/**
+ setter方法，设置控制器方向，默认竖屏
+ */
+- (void)setOrientationsMask:(UIInterfaceOrientationMask)orientationsMask;
+
+/**
+ 主动强制横竖屏方法
+ */
+- (void)forceToOrientation:(UIDeviceOrientation)orientation;
 
 @end

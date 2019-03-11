@@ -25,7 +25,8 @@
     self.interactivePopGestureRecognizer.delegate = self;
 }
 
-//状态栏设置
+#pragma mark --- 状态栏设置
+
 - (UIViewController *)childViewControllerForStatusBarStyle {
     return self.topViewController;
 }
@@ -34,13 +35,21 @@
     return self.topViewController;
 }
 
-//屏幕旋转控制
-- (BOOL)shouldAutorotate {
-    return self.topViewController.shouldAutorotate;
+#pragma mark --- 屏幕旋转控制
+
+//打开时当前页面朝向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return [self.topViewController preferredInterfaceOrientationForPresentation];
 }
 
+//是否支持旋转
+- (BOOL)shouldAutorotate {
+    return [self.topViewController shouldAutorotate];
+}
+
+//支持的旋转方向
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return self.topViewController.supportedInterfaceOrientations;
+    return [self.topViewController supportedInterfaceOrientations];
 }
 
 #pragma mark --- UIGestureRecognizerDelegate
