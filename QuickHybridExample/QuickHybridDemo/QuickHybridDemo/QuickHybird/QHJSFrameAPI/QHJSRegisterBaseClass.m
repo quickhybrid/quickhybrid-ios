@@ -103,4 +103,10 @@
     [self.cacheHandlerDic removeObjectForKey:keyName];
 }
 
+//释放内存的方法
+- (void)releaseRAM {
+    self.handlesDic = nil;
+    self.cacheHandlerDic = nil;
+}
+
 @end

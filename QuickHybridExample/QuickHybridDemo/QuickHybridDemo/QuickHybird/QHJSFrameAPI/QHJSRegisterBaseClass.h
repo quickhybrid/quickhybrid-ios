@@ -80,4 +80,9 @@ typedef void (^WVJBHandler)(id data, WVJBResponseCallback responseCallback);
  */
 - (BOOL)containObjectForKeyInCacheDic:(NSString *)keyName;
 
+/**
+ 释放内存
+ */
+- (void)releaseRAM;
+
 @end

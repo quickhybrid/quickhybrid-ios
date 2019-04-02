@@ -74,6 +74,10 @@
  ***********/
 
 - (void)dealloc {
+    //手动释放内存
+    for (QHJSRegisterBaseClass *bsRegister in _base.modulesDic.allValues) {
+        [bsRegister releaseRAM];
+    }
     _base = nil;
     _webView = nil;
     _webViewDelegate = nil;
