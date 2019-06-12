@@ -198,8 +198,7 @@ static NSString *KVOContext;
         }
         
         NSURL *url = navigationAction.request.URL;
-        //扫一扫支持iOS下载应用安装
-        if ([url.absoluteString hasPrefix:@"itms-services://"] || [url.absoluteString hasPrefix:@"https://itunes.apple.com/cn/app"]) {
+        if ([url.absoluteString hasPrefix:@"https://itunes.apple.com/cn/app"]) {
             [[UIApplication sharedApplication] openURL:url];
             decisionHandler(WKNavigationActionPolicyCancel);
         } else {
